@@ -1,0 +1,1380 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2026-03-14T23:39:37Z",
+        "google_maps_url": "http://maps.google.com/?q=53.45294999813981,-2.919783666729927",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2026-03-08T13:10:15Z",
+        "google_maps_url": "http://maps.google.com/?q=9.497716935175486,100.02071745693684",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2026-03-08T13:09:53Z",
+        "google_maps_url": "http://maps.google.com/?q=Chiang+Mai,+Thailand&ftid=0x30d0ccc8c2997841:0x6a69e176922503d4",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2026-03-08T13:09:42Z",
+        "google_maps_url": "http://maps.google.com/?q=Phuket,+Thailand&ftid=0x305031e2c462524f:0xe9ca9a85063dba21",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2026-03-08T13:09:22Z",
+        "google_maps_url": "http://maps.google.com/?q=Bangkok,+Thailand&ftid=0x311d6032280d61f3:0x10100b25de24820",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2026-03-08T13:08:48Z",
+        "google_maps_url": "http://maps.google.com/?q=Santa+Cruz+de+Tenerife,+Spain&ftid=0xc41cceccc254171:0x43111473d277e52e",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -16.2799150,
+          28.5308651
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2026-03-08T13:08:40Z",
+        "google_maps_url": "http://maps.google.com/?cid=7839571478997687330",
+        "location": {
+          "address": "Monte de Las Mercedes, TF-12, Km 6, 38294 La Laguna, Santa Cruz de Tenerife, Espanha",
+          "country_code": "ES",
+          "name": "Parque Rural de Anaga"
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2026-03-08T13:08:22Z",
+        "google_maps_url": "http://maps.google.com/?q=38650+Los+Cristianos,+Santa+Cruz+de+Tenerife,+Spain&ftid=0xc6a982c7e468e79:0x260340f4bc024792",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2026-01-16T08:32:40Z",
+        "google_maps_url": "http://maps.google.com/?q=Zadar,+Croatia&ftid=0x4761fa62d2c0b88f:0x12323e1c13f40784",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2025-11-29T02:10:11Z",
+        "google_maps_url": "http://maps.google.com/?q=Abu+Dhabi+-+United+Arab+Emirates&ftid=0x3e5e440f723ef2b9:0xc7cc2e9341971108",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2025-07-04T20:22:10Z",
+        "google_maps_url": "http://maps.google.com/?q=38.73493020673159,-9.143418855965137",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          27.9103282,
+          43.2034993
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2025-06-27T19:11:40Z",
+        "google_maps_url": "http://maps.google.com/?cid=12332570654289333847",
+        "location": {
+          "address": "Varna CenterOdesos, 23 \"Ruse Str, 9000 Varna, Bulgária",
+          "country_code": "BG",
+          "name": "Yo-Ho-Hostel"
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2025-06-26T09:00:38Z",
+        "google_maps_url": "http://maps.google.com/?q=Tilburg,+Netherlands&ftid=0x47c6be1d126870f3:0xaa2d2182f3b09727",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2025-06-26T08:59:59Z",
+        "google_maps_url": "http://maps.google.com/?q=Kocaeli,+T%C3%BCrkiye&ftid=0x14cb20946fcacc43:0xa82cb38deb56d859",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2025-06-26T08:59:12Z",
+        "google_maps_url": "http://maps.google.com/?q=Plovdiv,+Bulgaria&ftid=0x14acd108a248763d:0x6470d1fa6f1338a0",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          29.0106525,
+          41.0640901
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2025-05-18T10:33:02Z",
+        "google_maps_url": "http://maps.google.com/?cid=18332574764168884813",
+        "location": {
+          "address": "Esentepe, Yıldız Posta Cd. Point Hotel No:29, 34394 Şişli/İstanbul, Turquia",
+          "country_code": "TR",
+          "name": "View Point Restaurant"
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2025-05-16T14:15:27Z",
+        "google_maps_url": "http://maps.google.com/?q=Morocco&ftid=0xdafee8d96179e51:0x5950b6534f87adb8",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2025-05-16T14:14:33Z",
+        "google_maps_url": "http://maps.google.com/?q=Rio+de+Janeiro,+State+of+Rio+de+Janeiro,+Brazil&ftid=0x9bde559108a05b:0x50dc426c672fd24e",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2025-05-10T19:12:48Z",
+        "google_maps_url": "http://maps.google.com/?q&ftid=0x14e7741497e68c1b:0x84f9613dbe3457ee",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2025-05-10T19:12:36Z",
+        "google_maps_url": "http://maps.google.com/?q&ftid=0x14e70663f42de2c9:0x6c05fdff50f4b5e7",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2025-05-02T09:40:51Z",
+        "google_maps_url": "http://maps.google.com/?q=70044+Polignano+a+Mare,+Metropolitan+City+of+Bari,+Italy&ftid=0x1347cbeb9e80f67b:0x9bbe6b6e25a97601",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2024-09-10T09:36:08Z",
+        "google_maps_url": "http://maps.google.com/?q=Brussels,+Belgium&ftid=0x47c3a4ed73c76867:0xc18b3a66787302a7",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2023-11-29T11:41:28Z",
+        "google_maps_url": "http://maps.google.com/?q=Seoul,+South+Korea&ftid=0x357ca2012d5c39cf:0x7e11eca1405bf29b",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2023-11-29T11:41:15Z",
+        "google_maps_url": "http://maps.google.com/?q=Busan,+South+Korea&ftid=0x3568eb6de823cd35:0x35d8cb74247108a7",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2023-10-25T18:12:24Z",
+        "google_maps_url": "http://maps.google.com/?q&ftid=0xd4e4e27664b89b9:0x6534acc41e95a645",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2023-10-25T18:12:10Z",
+        "google_maps_url": "http://maps.google.com/?q&ftid=0xd4949ae8a6bee71:0xd27cdc801682ba96",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2023-07-16T11:34:09Z",
+        "google_maps_url": "http://maps.google.com/?q=Guimaraes,+Portugal&ftid=0xd24f0191ff06bb3:0x53e284e8981c154a",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2023-03-15T16:02:47Z",
+        "google_maps_url": "http://maps.google.com/?q=Malta&ftid=0x130e45281d8647c5:0xf582d86136be4239",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2023-01-06T19:00:10Z",
+        "google_maps_url": "http://maps.google.com/?q=Zaragoza,+Spain&ftid=0xd5914dd5e618e91:0x49df13f1158489a8",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2022-10-19T18:59:30Z",
+        "google_maps_url": "http://maps.google.com/?q=76125+Trani,+Province+of+Barletta-Andria-Trani,+Italy&ftid=0x1338046c70780ea3:0x3e4422a665b12fd6",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2022-09-15T10:00:58Z",
+        "google_maps_url": "http://maps.google.com/?q=21000,+Split,+Croatia&ftid=0x13355dfc6bbcf517:0xa1798ff631b49f98",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2022-09-15T10:00:48Z",
+        "google_maps_url": "http://maps.google.com/?q=Hvar,+Croatia&ftid=0x133581144d23ffe7:0x400ad50862bcfa0",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2022-09-15T10:00:39Z",
+        "google_maps_url": "http://maps.google.com/?q=Dubrovnik,+Croatia&ftid=0x134b8ba20835e87d:0x400ad50862bd500",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2022-09-15T10:00:23Z",
+        "google_maps_url": "http://maps.google.com/?q=Budva,+Montenegro&ftid=0x134dd495f3e43371:0x3b467f06bc9c3048",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2022-09-15T10:00:03Z",
+        "google_maps_url": "http://maps.google.com/?q=Tirana,+Albania&ftid=0x1350310470fac5db:0x40092af10653720",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2022-09-15T09:59:50Z",
+        "google_maps_url": "http://maps.google.com/?q=Skopje,+North+Macedonia&ftid=0x135415a58c9aa2a5:0xb2ed88c260872020",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2022-09-15T09:59:37Z",
+        "google_maps_url": "http://maps.google.com/?q=Sofia,+Bulgaria&ftid=0x40aa8682cb317bf5:0x400a01269bf5e60",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2022-09-15T09:59:17Z",
+        "google_maps_url": "http://maps.google.com/?q=Bucharest&ftid=0x40b1f93abf3cad4f:0xac0632e37c9ca628",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2022-07-17T09:39:45Z",
+        "google_maps_url": "http://maps.google.com/?q=Alba+Iulia&ftid=0x474ea80cce754875:0xe9b0f44e8e45cd05",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2022-05-25T12:41:43Z",
+        "google_maps_url": "http://maps.google.com/?q=Athens,+Greece&ftid=0x14a1bd1f067043f1:0x2736354576668ddd",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2022-05-09T12:39:13Z",
+        "google_maps_url": "http://maps.google.com/?q=Sighi%C8%99oara,+Romania&ftid=0x474b74f2e6637e5b:0x7b12e0094163247f",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2022-05-09T12:37:49Z",
+        "google_maps_url": "http://maps.google.com/?q=Turda,+Romania&ftid=0x47496620aa78a95b:0xc7f433dbd893f8a3",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2022-04-11T18:54:59Z",
+        "google_maps_url": "http://maps.google.com/?q=Timi%C8%99oara,+Romania&ftid=0x4745677dcb0fb5a7:0x537faf6473936749",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2022-04-11T18:54:37Z",
+        "google_maps_url": "http://maps.google.com/?q=Sibiu,+Romania&ftid=0x474c6788fd2c1cd5:0x3ade9d214e3390b4",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2022-04-11T18:54:22Z",
+        "google_maps_url": "http://maps.google.com/?q=Bran+507025,+Romania&ftid=0x40b347e54ce55873:0xb2a3745ffef5cc10",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2022-04-11T18:54:08Z",
+        "google_maps_url": "http://maps.google.com/?q=Bra%C8%99ov,+Romania&ftid=0x40b35b862aa214f1:0x6cf5f2ef54391e0f",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2022-01-14T10:20:21Z",
+        "google_maps_url": "http://maps.google.com/?q=Belgrade,+Serbia&ftid=0x475a7aa3d7b53fbd:0x1db8645cf2177ee4",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2021-09-24T19:04:39Z",
+        "google_maps_url": "http://maps.google.com/?q=London,+UK&ftid=0x47d8a00baf21de75:0x52963a5addd52a99",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2021-09-24T19:02:58Z",
+        "google_maps_url": "http://maps.google.com/?q=Rome,+Metropolitan+City+of+Rome,+Italy&ftid=0x132f6196f9928ebb:0xb90f770693656e38",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2021-09-07T07:34:07Z",
+        "google_maps_url": "http://maps.google.com/?q=70011+Alberobello+Metropolitan+City+of+Bari,+Italy&ftid=0x1347b26487f9383d:0x803e3f2f028a5d8",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2021-09-07T07:33:06Z",
+        "google_maps_url": "http://maps.google.com/?q=74020+Campomarino,+Province+of+Taranto,+Italy&ftid=0x1346e963feab1a99:0x607e9feddbbd65cc",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2021-09-07T07:32:48Z",
+        "google_maps_url": "http://maps.google.com/?q=Bari,+Metropolitan+City+of+Bari,+Italy&ftid=0x1347e8f8f3078d6f:0x87254066a3908e1",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2021-08-17T12:11:40Z",
+        "google_maps_url": "http://maps.google.com/?q=Cluj-Napoca,+Romania&ftid=0x47490c1f916c0b8b:0xbbc601c331f148b",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2021-05-29T13:47:57Z",
+        "google_maps_url": "http://maps.google.com/?q=Ribeira+de+Pena&ftid=0xd24d2c52f4332e5:0xdbd04c30f5bee01b",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2020-12-31T09:37:39Z",
+        "google_maps_url": "http://maps.google.com/?q=51.534909,-0.124885",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2019-12-16T05:45:00Z",
+        "google_maps_url": "http://maps.google.com/?q=Barcelona,+Espa%C3%B1a&ftid=0x12a49816718e30e5:0x44b0fb3d4f47660a",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2019-12-16T05:44:39Z",
+        "google_maps_url": "http://maps.google.com/?q=Quarteira&ftid=0xd1ab5a5711a9d9d:0xc500a296506c0b81",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2019-12-16T05:43:59Z",
+        "google_maps_url": "http://maps.google.com/?q=Salamanca,+Espa%C3%B1a&ftid=0xd3f265dc7dd7c45:0x2f7ae4d00bbfa9aa",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.1767283,
+          51.4972216
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2019-12-16T05:43:09Z",
+        "google_maps_url": "http://maps.google.com/?cid=2437941248506864350",
+        "location": {
+          "address": "Exhibition Rd, South Kensington, London SW7 2DD, Reino Unido",
+          "country_code": "GB",
+          "name": "Science Museum"
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2019-11-16T11:54:56Z",
+        "google_maps_url": "http://maps.google.com/?q=Oviedo,+Asturias,+Espa%C3%B1a&ftid=0xd368c9a60ac1c67:0x3134440ecc5e6224",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2019-11-16T11:54:48Z",
+        "google_maps_url": "http://maps.google.com/?q=Gij%C3%B3n,+Asturias,+Espa%C3%B1a&ftid=0xd367c66cbf494bf:0xbd06d207048d3536",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2019-11-16T11:46:27Z",
+        "google_maps_url": "http://maps.google.com/?q=Valencia,+Espa%C3%B1a&ftid=0xd604f4cf0efb06f:0xb4a351011f7f1d39",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2019-11-07T17:20:55Z",
+        "google_maps_url": "http://maps.google.com/?q=Calle+de+Uceda,+2,+28053+Madrid,+Espa%C3%B1a&ftid=0xd42267541289b75:0x88bea9aeba449687",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2019-10-06T11:58:28Z",
+        "google_maps_url": "http://maps.google.com/?q=Aveiro&ftid=0xd23980ed5b2e78d:0x3042e1cd013c1f07",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2019-08-23T18:08:15Z",
+        "google_maps_url": "http://maps.google.com/?q=Huelva,+Espanha&ftid=0xd11cfe6d744284b:0xd82baac110b40f83",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2019-08-23T18:07:57Z",
+        "google_maps_url": "http://maps.google.com/?q=Bragan%C3%A7a&ftid=0xd3a49fd2c3fc247:0xd7369ad50abd191c",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2019-08-23T18:07:29Z",
+        "google_maps_url": "http://maps.google.com/?q=Braga&ftid=0xd24febc6cf5d867:0xbc5d054162d1e218",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2019-08-23T18:07:17Z",
+        "google_maps_url": "http://maps.google.com/?q=Viana+do+Castelo&ftid=0xd25b7cef6e86a73:0xfe4d167e5dd21dfd",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2019-08-23T18:06:55Z",
+        "google_maps_url": "http://maps.google.com/?q=Porto&ftid=0xd2465abc4e153c1:0xa648d95640b114bc",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2019-08-23T18:06:38Z",
+        "google_maps_url": "http://maps.google.com/?q=Sevilha,+Espanha&ftid=0xd126c1114be6291:0x34f018621cfe5648",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2019-07-17T21:10:26Z",
+        "google_maps_url": "http://maps.google.com/?q=Agaete,+Las+Palmas,+Espanha&ftid=0xc408b65894cde91:0x2a021e37bef00582",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2019-07-17T21:10:12Z",
+        "google_maps_url": "http://maps.google.com/?q=Las+Palmas,+Espanha&ftid=0xc40950e91c097d1:0xab36b5ac5338ba65",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2019-02-14T09:07:44Z",
+        "google_maps_url": "http://maps.google.com/?q=Roterd%C3%A3o,+Pa%C3%ADses+Baixos&ftid=0x47c5b7605f54c47d:0x5229bbac955e4b85",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.1282990,
+          51.5089290
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2019-02-04T09:03:25Z",
+        "google_maps_url": "http://maps.google.com/?cid=4805205997576757428",
+        "location": {
+          "address": "Trafalgar Square, London WC2N 5DN, Reino Unido",
+          "country_code": "GB",
+          "name": "National Gallery"
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.1269566,
+          51.5194133
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2019-02-04T09:03:15Z",
+        "google_maps_url": "http://maps.google.com/?cid=3436696222068785831",
+        "location": {
+          "address": "Great Russell St, London WC1B 3DG, Reino Unido",
+          "country_code": "GB",
+          "name": "Museu Britânico"
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.1293572,
+          51.5021585
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2019-02-04T09:02:39Z",
+        "google_maps_url": "http://maps.google.com/?cid=14811513272390358500",
+        "location": {
+          "address": "King Charles St, London SW1A 2AQ, Reino Unido",
+          "country_code": "GB",
+          "name": "Churchill War Rooms"
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2019-02-03T15:05:13Z",
+        "google_maps_url": "http://maps.google.com/?q=Oxford+St,+London,+Reino+Unido&ftid=0x48761ad554c335c1:0xda2164b934c67c1a",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.1929706,
+          51.4921514
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2019-02-03T01:23:19Z",
+        "google_maps_url": "http://maps.google.com/?cid=3593777407124978235",
+        "location": {
+          "address": "232 Earls Ct Rd, London SW5 9RD, Reino Unido",
+          "country_code": "GB",
+          "name": "Earl’s Court Police Box"
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -0.0835493,
+          51.5112422
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2019-02-03T00:59:00Z",
+        "google_maps_url": "http://maps.google.com/?cid=15354298128763884164",
+        "location": {
+          "address": "1, Sky Garden Walk, London EC3M 8AF, Reino Unido",
+          "country_code": "GB",
+          "name": "Sky Garden"
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2019-01-29T20:07:45Z",
+        "google_maps_url": "http://maps.google.com/?q=Karlovy+Vary,+Tch%C3%A9quia&ftid=0x47a099405da94d43:0x284baf8a43d431d0",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2018-12-14T09:44:28Z",
+        "google_maps_url": "http://maps.google.com/?q=Dresden,+Alemanha&ftid=0x4709cf29101ad6a9:0x421b1cb4288feb0",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2018-12-02T01:26:56Z",
+        "google_maps_url": "http://maps.google.com/?q=Amsterd%C3%A3,+Pa%C3%ADses+Baixos&ftid=0x47c63fb5949a7755:0x6600fd4cb7c0af8d",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2018-11-26T13:08:08Z",
+        "google_maps_url": "http://maps.google.com/?q=Brun&ftid=0x4712943ac03f5111:0x400af0f6614b1b0",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          19.2054949,
+          50.0293909
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2018-11-22T18:06:30Z",
+        "google_maps_url": "http://maps.google.com/?cid=16780821051702137797",
+        "location": {
+          "address": "Więźniów Oświęcimia 55, 32-600 Oświęcim, Polónia",
+          "country_code": "PL",
+          "name": "Campo de concentração de Auschwitz"
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2018-11-22T18:06:08Z",
+        "google_maps_url": "http://maps.google.com/?q=Crac%C3%B3via,+Pol%C3%B3nia&ftid=0x471644c0354e18d1:0xb46bb6b576478abf",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2018-11-22T18:05:53Z",
+        "google_maps_url": "http://maps.google.com/?q=Bresl%C3%A1via,+Pol%C3%B3nia&ftid=0x470fe9c2d4b58abf:0xb70956aec205e0f5",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2018-11-22T18:05:16Z",
+        "google_maps_url": "http://maps.google.com/?q=Budapeste,+Hungria&ftid=0x4741c334d1d4cfc9:0x400c4290c1e1160",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2018-11-22T18:04:58Z",
+        "google_maps_url": "http://maps.google.com/?q=381+01+%C4%8Cesk%C3%BD+Krumlov&ftid=0x47735d9c336e1879:0x400af0f6614df20",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          0,
+          0
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "date": "2018-11-22T18:03:24Z",
+        "google_maps_url": "http://maps.google.com/?q=Viena,+%C3%81ustria&ftid=0x476d079e5136ca9f:0xfdc2e58a51a25b46",
+        "Comment": "Não existem informações de localização disponíveis para este local guardado."
+      },
+      "type": "Feature"
+    }
+  ]
+}
