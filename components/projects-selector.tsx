@@ -3,9 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
-import { Fragment, startTransition, useEffect, useState } from "react";
+import { Fragment, startTransition, useState } from "react";
 import betterGmailLogo from "@/bettergmaillogo.webp";
-import instagramIcon from "@/stores/instagram-vector-logo-icon-social-media-logotype_901408-392.avif";
+const instagramIcon = "/assets/shared/instagram.webp";
 
 import {
   Project,
@@ -90,7 +90,8 @@ const projectThemes: Record<string, ProjectTheme> = {
   },
   umedicu: {
     panel: "border-[#ddd7ef] bg-[#fbf8ff]",
-    previewShell: "border-[#6ab9aa]/60 bg-[linear-gradient(135deg,#f4d7e9_0%,#ccefe9_100%)]",
+    previewShell:
+      "border-[#6ab9aa]/60 bg-[linear-gradient(135deg,#f4d7e9_0%,#ccefe9_100%)]",
     previewInner: "bg-white/78",
     surface: "border-[#e4dcf3] bg-[#f7f3ff]",
     logoSurface: "bg-white",
@@ -99,7 +100,8 @@ const projectThemes: Record<string, ProjectTheme> = {
   },
   nexdoo: {
     panel: "border-[#ecd7ba] bg-[#fff8ef]",
-    previewShell: "border-[#e08e2f]/60 bg-[linear-gradient(135deg,#f6b24d_0%,#f6d05f_100%)]",
+    previewShell:
+      "border-[#e08e2f]/60 bg-[linear-gradient(135deg,#f6b24d_0%,#f6d05f_100%)]",
     previewInner: "bg-[#fff3db]",
     surface: "border-[#eedbbf] bg-[#fff4e2]",
     logoSurface: "bg-white",
@@ -108,7 +110,8 @@ const projectThemes: Record<string, ProjectTheme> = {
   },
   "safe-travel": {
     panel: "border-[#f0d2ca] bg-[#fff7f4]",
-    previewShell: "border-[#ef6d4d]/60 bg-[linear-gradient(135deg,#ffb28f_0%,#ffd5c7_100%)]",
+    previewShell:
+      "border-[#ef6d4d]/60 bg-[linear-gradient(135deg,#ffb28f_0%,#ffd5c7_100%)]",
     previewInner: "bg-white/82",
     surface: "border-[#f1dad3] bg-[#fff1ec]",
     logoSurface: "bg-white",
@@ -117,7 +120,8 @@ const projectThemes: Record<string, ProjectTheme> = {
   },
   habits: {
     panel: "border-[#ead9cd] bg-[#fff9f4]",
-    previewShell: "border-[#f0a05f]/55 bg-[linear-gradient(135deg,#fff0d7_0%,#ffd7ae_100%)]",
+    previewShell:
+      "border-[#f0a05f]/55 bg-[linear-gradient(135deg,#fff0d7_0%,#ffd7ae_100%)]",
     previewInner: "bg-[#fff8ef]",
     surface: "border-[#ebddd3] bg-[#fff5eb]",
     logoSurface: "bg-[#fff9f3]",
@@ -126,7 +130,8 @@ const projectThemes: Record<string, ProjectTheme> = {
   },
   mumzers: {
     panel: "border-[#ead4d9] bg-[#fff7f8]",
-    previewShell: "border-[#8e4456]/55 bg-[linear-gradient(135deg,#f9d8df_0%,#f5e9dd_100%)]",
+    previewShell:
+      "border-[#8e4456]/55 bg-[linear-gradient(135deg,#f9d8df_0%,#f5e9dd_100%)]",
     previewInner: "bg-white/82",
     surface: "border-[#eddde0] bg-[#fff0f3]",
     logoSurface: "bg-[#fff7f7]",
@@ -135,7 +140,8 @@ const projectThemes: Record<string, ProjectTheme> = {
   },
   "pocket-tours": {
     panel: "border-[#efddd4] bg-[#fff9f6]",
-    previewShell: "border-[#e46947]/55 bg-[linear-gradient(135deg,#ffba8b_0%,#ffd8c4_100%)]",
+    previewShell:
+      "border-[#e46947]/55 bg-[linear-gradient(135deg,#ffba8b_0%,#ffd8c4_100%)]",
     previewInner: "bg-white/82",
     surface: "border-[#efe2da] bg-[#fff2ea]",
     logoSurface: "bg-white",
@@ -144,7 +150,8 @@ const projectThemes: Record<string, ProjectTheme> = {
   },
   zcharge: {
     panel: "border-[#d7dbe4] bg-[#f8fafc]",
-    previewShell: "border-[#606c80]/55 bg-[linear-gradient(135deg,#e8edf4_0%,#cfd8e6_100%)]",
+    previewShell:
+      "border-[#606c80]/55 bg-[linear-gradient(135deg,#e8edf4_0%,#cfd8e6_100%)]",
     previewInner: "bg-white/86",
     surface: "border-[#dde2ea] bg-[#f2f5f9]",
     logoSurface: "bg-white",
@@ -153,7 +160,8 @@ const projectThemes: Record<string, ProjectTheme> = {
   },
   finance: {
     panel: "border-[#d7e1e6] bg-[#f7fbfc]",
-    previewShell: "border-[#4e98a2]/55 bg-[linear-gradient(135deg,#d5f1f0_0%,#b8dce1_100%)]",
+    previewShell:
+      "border-[#4e98a2]/55 bg-[linear-gradient(135deg,#d5f1f0_0%,#b8dce1_100%)]",
     previewInner: "bg-white/86",
     surface: "border-[#dce7ea] bg-[#eef7f8]",
     logoSurface: "bg-white",
@@ -162,7 +170,8 @@ const projectThemes: Record<string, ProjectTheme> = {
   },
   footy: {
     panel: "border-[#d8e4df] bg-[#f7fbf8]",
-    previewShell: "border-[#4c7f73]/55 bg-[linear-gradient(135deg,#dbeee8_0%,#bdd8cf_100%)]",
+    previewShell:
+      "border-[#4c7f73]/55 bg-[linear-gradient(135deg,#dbeee8_0%,#bdd8cf_100%)]",
     previewInner: "bg-white/86",
     surface: "border-[#dce7e2] bg-[#eef6f2]",
     logoSurface: "bg-white",
@@ -171,7 +180,8 @@ const projectThemes: Record<string, ProjectTheme> = {
   },
   "loves-conception": {
     panel: "border-[#ead4cc] bg-[#fff7f1]",
-    previewShell: "border-[#bc6556]/55 bg-[linear-gradient(135deg,#f0bfab_0%,#f6e1d5_100%)]",
+    previewShell:
+      "border-[#bc6556]/55 bg-[linear-gradient(135deg,#f0bfab_0%,#f6e1d5_100%)]",
     previewInner: "bg-white/80",
     surface: "border-[#ebddd5] bg-[#fff0e8]",
     logoSurface: "bg-[#fff8f4]",
@@ -191,7 +201,9 @@ function getInitialSelectedSlug(projects: Project[], slug?: string) {
     return fallbackSlug;
   }
 
-  return projects.some((project) => project.slug === slug) ? slug : fallbackSlug;
+  return projects.some((project) => project.slug === slug)
+    ? slug
+    : fallbackSlug;
 }
 
 type ProjectActionItem =
@@ -260,10 +272,22 @@ function AppleStoreMark() {
 function GooglePlayMark() {
   return (
     <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5">
-      <path fill="#00d084" d="M3.7 3.25 13.97 13.5 3.71 23.76a2.2 2.2 0 0 1-.21-.94V4.19c0-.33.07-.65.2-.94Z" />
-      <path fill="#00a3ff" d="m16.91 16.43-2.94-2.93L3.7 23.76c.34-.06.67-.18.97-.36l12.24-6.97Z" />
-      <path fill="#ffca28" d="m16.91 10.57-12.24-6.97c-.3-.17-.63-.29-.97-.35L13.97 13.5l2.94-2.93Z" />
-      <path fill="#ff5252" d="M20.51 12.61c.65-.37.65-1.31 0-1.68l-3.6-2.04-2.94 2.93 2.94 2.93 3.6-2.04Z" />
+      <path
+        fill="#00d084"
+        d="M3.7 3.25 13.97 13.5 3.71 23.76a2.2 2.2 0 0 1-.21-.94V4.19c0-.33.07-.65.2-.94Z"
+      />
+      <path
+        fill="#00a3ff"
+        d="m16.91 16.43-2.94-2.93L3.7 23.76c.34-.06.67-.18.97-.36l12.24-6.97Z"
+      />
+      <path
+        fill="#ffca28"
+        d="m16.91 10.57-12.24-6.97c-.3-.17-.63-.29-.97-.35L13.97 13.5l2.94-2.93Z"
+      />
+      <path
+        fill="#ff5252"
+        d="M20.51 12.61c.65-.37.65-1.31 0-1.68l-3.6-2.04-2.94 2.93 2.94 2.93 3.6-2.04Z"
+      />
     </svg>
   );
 }
@@ -295,7 +319,9 @@ function StoreBadge({
         <span className="text-[0.62rem] font-medium uppercase tracking-[0.18em] text-white/68">
           {eyebrow}
         </span>
-        <span className="truncate text-sm font-semibold leading-5">{label}</span>
+        <span className="truncate text-sm font-semibold leading-5">
+          {label}
+        </span>
       </span>
     </a>
   );
@@ -350,17 +376,6 @@ export function ProjectsSelector({
   );
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
-  useEffect(() => {
-    const nextProjects = [...projects].sort((a, b) => {
-      const aIndex = projectOrderMap.get(a.slug) ?? Number.MAX_SAFE_INTEGER;
-      const bIndex = projectOrderMap.get(b.slug) ?? Number.MAX_SAFE_INTEGER;
-
-      return aIndex - bIndex || a.title.localeCompare(b.title);
-    });
-
-    setSelectedSlug(getInitialSelectedSlug(nextProjects, initialSlug));
-  }, [initialSlug, projects]);
-
   const selectedProject =
     orderedProjects.find((project) => project.slug === selectedSlug) ??
     orderedProjects[0];
@@ -384,26 +399,13 @@ export function ProjectsSelector({
     : 0;
   const activePreviewSlide = previewSlides[safeActiveSlideIndex];
   const footerMeta = selectedProject.detailCard.meta ?? selectedProject.section;
-  const topLabels = [selectedProject.detailCard.role].filter(Boolean) as string[];
+  const topLabels = [selectedProject.detailCard.role].filter(
+    Boolean,
+  ) as string[];
   const actionItems = getProjectActionItems(selectedProject);
   const showZChargeDeckPanel =
-    selectedProject.slug === "zcharge" && activePreviewSlide?.type === "placeholder";
-
-  useEffect(() => {
-    setActiveSlideIndex(0);
-  }, [previewSlides.length, selectedProject.slug]);
-
-  useEffect(() => {
-    if (previewSlides.length <= 1) return;
-
-    const intervalId = window.setInterval(() => {
-      if (document.hidden) return;
-
-      setActiveSlideIndex((current) => (current + 1) % previewSlides.length);
-    }, 6200);
-
-    return () => window.clearInterval(intervalId);
-  }, [previewSlides.length, selectedProject.slug]);
+    selectedProject.slug === "zcharge" &&
+    activePreviewSlide?.type === "placeholder";
 
   const goToSlide = (index: number) => {
     if (!previewSlides.length) return;
@@ -427,10 +429,7 @@ export function ProjectsSelector({
       <div className="relative z-20 -mx-1 max-w-full overflow-x-auto px-1 pb-1 lg:overflow-visible">
         <div className="flex w-max min-w-full items-start gap-6 sm:gap-8 lg:w-full lg:justify-between lg:gap-10">
           {groupedProjects.map(({ group, projects: groupProjects }) => (
-            <div
-              key={group}
-              className="min-w-fit lg:first:mr-4 lg:last:ml-4"
-            >
+            <div key={group} className="min-w-fit lg:first:mr-4 lg:last:ml-4">
               <div>
                 <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-muted/72 sm:text-[10.5px]">
                   {group}
@@ -451,7 +450,10 @@ export function ProjectsSelector({
                         href={`/projects?project=${encodeURIComponent(project.slug)}`}
                         prefetch={false}
                         onClick={() => {
-                          startTransition(() => setSelectedSlug(project.slug));
+                          startTransition(() => {
+                            setSelectedSlug(project.slug);
+                            setActiveSlideIndex(0);
+                          });
                         }}
                         className={cn(
                           "flex items-center justify-center rounded-[18px] p-1.5 transition duration-300 sm:p-2",
@@ -513,255 +515,261 @@ export function ProjectsSelector({
           selectedTheme.panel,
         )}
       >
-          <div className="grid gap-6 xl:grid-cols-[minmax(0,0.94fr)_minmax(360px,1.06fr)] xl:items-start">
-            <div className="flex min-w-0 flex-col">
-              {topLabels.length ? (
-                <div className="flex flex-wrap items-center gap-2.5">
-                  {topLabels.map((label, index) => (
-                    <span
-                      key={label}
-                      className={cn(
-                        "rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em]",
-                        index === 0
-                          ? "bg-accent-soft text-accent-deep"
-                          : cn("border text-muted", selectedTheme.surface),
-                      )}
-                    >
-                      {label}
-                    </span>
-                  ))}
-                </div>
-              ) : null}
-
-              <div className="mt-5">
-                <h2 className="font-display text-[2.7rem] leading-[0.98] tracking-tight text-ink sm:text-[3.4rem]">
-                  {selectedProject.title}
-                </h2>
-                <p className="mt-3 max-w-2xl text-base leading-8 text-muted sm:text-lg">
-                  {selectedProject.summary}
-                </p>
-              </div>
-
-              <div className="mt-7 border-t border-black/6 pt-6">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-accent-deep">
-                  What I did
-                </p>
-                <ul className="mt-4 space-y-3">
-                  {selectedProject.detailCard.whatIDid.map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-start gap-3 text-sm leading-7 text-ink/82 sm:text-[0.96rem]"
-                    >
-                      <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-accent/60" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="mt-6 border-t border-black/6 pt-6">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-accent-deep">
-                  {selectedProject.detailCard.outcome.title}
-                </p>
-                <p className="mt-3 max-w-2xl text-sm leading-7 text-muted sm:text-[0.96rem]">
-                  {selectedProject.detailCard.outcome.text}
-                </p>
-                {selectedProject.detailCard.outcome.proofPoints?.length ? (
-                  <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-muted">
-                    {selectedProject.detailCard.outcome.proofPoints.map(
-                      (point, index) => (
-                        <Fragment key={point}>
-                          {index > 0 ? (
-                            <span
-                              aria-hidden="true"
-                              className="h-1.5 w-1.5 rounded-full bg-accent/35"
-                            />
-                          ) : null}
-                          <span>{point}</span>
-                        </Fragment>
-                      ),
+        <div className="grid gap-6 xl:grid-cols-[minmax(0,0.94fr)_minmax(360px,1.06fr)] xl:items-start">
+          <div className="flex min-w-0 flex-col">
+            {topLabels.length ? (
+              <div className="flex flex-wrap items-center gap-2.5">
+                {topLabels.map((label, index) => (
+                  <span
+                    key={label}
+                    className={cn(
+                      "rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em]",
+                      index === 0
+                        ? "bg-accent-soft text-accent-deep"
+                        : cn("border text-muted", selectedTheme.surface),
                     )}
-                  </div>
-                ) : null}
+                  >
+                    {label}
+                  </span>
+                ))}
               </div>
+            ) : null}
 
+            <div className="mt-5">
+              <h2 className="font-display text-[2.7rem] leading-[0.98] tracking-tight text-ink sm:text-[3.4rem]">
+                {selectedProject.title}
+              </h2>
+              <p className="mt-3 max-w-2xl text-base leading-8 text-muted sm:text-lg">
+                {selectedProject.summary}
+              </p>
             </div>
 
-            <div className="flex min-w-0 flex-col gap-4 xl:pt-16">
-              <div
-                className={cn(
-                  "grid items-center gap-2.5 rounded-[26px] border px-3 py-2.5 sm:grid-cols-[120px_minmax(0,1fr)] sm:px-3.5 sm:py-3",
-                  selectedTheme.surface,
-                )}
-              >
-                <VisualBlock
-                  visual={selectedLogoVisual}
-                  showLabel={false}
-                  elevated={false}
-                  className={cn(
-                    "aspect-[5/4] rounded-[20px] border-line/70 sm:aspect-square",
-                    selectedTheme.logoSurface,
+            <div className="mt-7 border-t border-black/6 pt-6">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-accent-deep">
+                What I did
+              </p>
+              <ul className="mt-4 space-y-3">
+                {selectedProject.detailCard.whatIDid.map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-start gap-3 text-sm leading-7 text-ink/82 sm:text-[0.96rem]"
+                  >
+                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-accent/60" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <Link
+              href={`/projects/${selectedProject.slug}`}
+              className="mt-5 text-link"
+            >
+              Full project details ↗
+            </Link>
+
+            <div className="mt-6 border-t border-black/6 pt-6">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-accent-deep">
+                {selectedProject.detailCard.outcome.title}
+              </p>
+              <p className="mt-3 max-w-2xl text-sm leading-7 text-muted sm:text-[0.96rem]">
+                {selectedProject.detailCard.outcome.text}
+              </p>
+              {selectedProject.detailCard.outcome.proofPoints?.length ? (
+                <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-muted">
+                  {selectedProject.detailCard.outcome.proofPoints.map(
+                    (point, index) => (
+                      <Fragment key={point}>
+                        {index > 0 ? (
+                          <span
+                            aria-hidden="true"
+                            className="h-1.5 w-1.5 rounded-full bg-accent/35"
+                          />
+                        ) : null}
+                        <span>{point}</span>
+                      </Fragment>
+                    ),
                   )}
-                />
-                <div className="flex min-w-0 flex-col items-end gap-2">
-                  <p className="max-w-[18rem] text-right text-sm leading-6 text-muted">
-                    {footerMeta}
-                  </p>
-                  {actionItems.length ? (
-                    <div className="flex w-full flex-wrap justify-end gap-2">
-                      {actionItems.map((action) => {
-                        if (action.type === "ios" || action.type === "android") {
-                          return action.type === "ios" ? (
-                            <StoreBadge
-                              key={`${selectedProject.slug}-${action.type}`}
-                              href={action.href}
-                              eyebrow="Available on"
-                              label="App Store"
-                            >
-                              <AppleStoreMark />
-                            </StoreBadge>
-                          ) : (
-                            <StoreBadge
-                              key={`${selectedProject.slug}-${action.type}`}
-                              href={action.href}
-                              eyebrow="Get it on"
-                              label="Google Play"
-                            >
-                              <GooglePlayMark />
-                            </StoreBadge>
-                          );
-                        }
+                </div>
+              ) : null}
+            </div>
+          </div>
 
-                        if (action.type === "instagram") {
-                          return (
-                            <a
-                              key={`${selectedProject.slug}-${action.type}`}
-                              href={action.href}
-                              target="_blank"
-                              rel="noreferrer"
-                              className="inline-flex items-center gap-2 rounded-full border border-line/75 bg-white/76 px-3 py-2 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-accent/30 hover:bg-white"
-                            >
-                              <span className="relative h-4 w-4 overflow-hidden rounded-[5px]">
-                                <Image
-                                  src={instagramIcon}
-                                  alt=""
-                                  fill
-                                  className="object-contain"
-                                />
-                              </span>
-                              <span>Instagram</span>
-                            </a>
-                          );
-                        }
+          <div className="flex min-w-0 flex-col gap-4 xl:pt-16">
+            <div
+              className={cn(
+                "grid items-center gap-2.5 rounded-[26px] border px-3 py-2.5 sm:grid-cols-[120px_minmax(0,1fr)] sm:px-3.5 sm:py-3",
+                selectedTheme.surface,
+              )}
+            >
+              <VisualBlock
+                visual={selectedLogoVisual}
+                showLabel={false}
+                elevated={false}
+                className={cn(
+                  "aspect-[5/4] rounded-[20px] border-line/70 sm:aspect-square",
+                  selectedTheme.logoSurface,
+                )}
+              />
+              <div className="flex min-w-0 flex-col items-end gap-2">
+                <p className="max-w-[18rem] text-right text-sm leading-6 text-muted">
+                  {footerMeta}
+                </p>
+                {actionItems.length ? (
+                  <div className="flex w-full flex-wrap justify-end gap-2">
+                    {actionItems.map((action) => {
+                      if (action.type === "ios" || action.type === "android") {
+                        return action.type === "ios" ? (
+                          <StoreBadge
+                            key={`${selectedProject.slug}-${action.type}`}
+                            href={action.href}
+                            eyebrow="Available on"
+                            label="App Store"
+                          >
+                            <AppleStoreMark />
+                          </StoreBadge>
+                        ) : (
+                          <StoreBadge
+                            key={`${selectedProject.slug}-${action.type}`}
+                            href={action.href}
+                            eyebrow="Get it on"
+                            label="Google Play"
+                          >
+                            <GooglePlayMark />
+                          </StoreBadge>
+                        );
+                      }
 
+                      if (action.type === "instagram") {
                         return (
                           <a
                             key={`${selectedProject.slug}-${action.type}`}
                             href={action.href}
                             target="_blank"
                             rel="noreferrer"
-                            className="inline-flex items-center rounded-full bg-ink px-3.5 py-2 text-sm font-semibold text-white transition hover:bg-ink/90"
+                            className="inline-flex items-center gap-2 rounded-full border border-line/75 bg-white/76 px-3 py-2 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-accent/30 hover:bg-white"
                           >
-                            {action.label}
+                            <span className="relative h-4 w-4 overflow-hidden rounded-[5px]">
+                              <Image
+                                src={instagramIcon}
+                                alt=""
+                                fill
+                                className="object-contain"
+                              />
+                            </span>
+                            <span>Instagram</span>
                           </a>
                         );
-                      })}
-                    </div>
-                  ) : null}
-                </div>
-              </div>
+                      }
 
+                      return (
+                        <a
+                          key={`${selectedProject.slug}-${action.type}`}
+                          href={action.href}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center rounded-full bg-ink px-3.5 py-2 text-sm font-semibold text-white transition hover:bg-ink/90"
+                        >
+                          {action.label}
+                        </a>
+                      );
+                    })}
+                  </div>
+                ) : null}
+              </div>
+            </div>
+
+            <div
+              className={cn(
+                "rounded-[30px] border p-4 shadow-card",
+                selectedTheme.previewShell,
+              )}
+            >
               <div
                 className={cn(
-                  "rounded-[30px] border p-4 shadow-card",
-                  selectedTheme.previewShell,
+                  "relative overflow-hidden rounded-[24px] border-white/20 aspect-[16/9.6] sm:aspect-[16/9.2] xl:aspect-[16/10.2]",
+                  selectedTheme.previewInner,
                 )}
               >
-                <div
-                  className={cn(
-                    "relative overflow-hidden rounded-[24px] border-white/20 aspect-[16/9.6] sm:aspect-[16/9.2] xl:aspect-[16/10.2]",
-                    selectedTheme.previewInner,
-                  )}
-                >
-                  {previewSlides.length > 1 ? (
-                    <>
-                      <button
-                        type="button"
-                        onClick={goToPreviousSlide}
-                        className="absolute left-3 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/55 bg-black/42 text-[1.65rem] font-semibold text-white shadow-[0_16px_36px_rgba(0,0,0,0.28)] backdrop-blur-sm transition hover:scale-[1.04] hover:bg-black/56"
-                        aria-label={`Show previous ${selectedProject.title} slide`}
-                      >
-                        ‹
-                      </button>
-                      <button
-                        type="button"
-                        onClick={goToNextSlide}
-                        className="absolute right-3 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/55 bg-black/42 text-[1.65rem] font-semibold text-white shadow-[0_16px_36px_rgba(0,0,0,0.28)] backdrop-blur-sm transition hover:scale-[1.04] hover:bg-black/56"
-                        aria-label={`Show next ${selectedProject.title} slide`}
-                      >
-                        ›
-                      </button>
-                    </>
-                  ) : null}
-
-                  <AnimatePresence mode="wait" initial={false}>
-                    <motion.div
-                      key={`${selectedProject.slug}-${safeActiveSlideIndex}`}
-                      initial={{ opacity: 0, x: 24, scale: 1.02 }}
-                      animate={{ opacity: 1, x: 0, scale: 1 }}
-                      exit={{ opacity: 0, x: -24, scale: 0.985 }}
-                      transition={{ duration: 0.45, ease: "easeOut" }}
-                      className="absolute inset-0"
+                {previewSlides.length > 1 ? (
+                  <>
+                    <button
+                      type="button"
+                      onClick={goToPreviousSlide}
+                      className="absolute left-3 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/55 bg-black/42 text-[1.65rem] font-semibold text-white shadow-[0_16px_36px_rgba(0,0,0,0.28)] backdrop-blur-sm transition hover:scale-[1.04] hover:bg-black/56"
+                      aria-label={`Show previous ${selectedProject.title} slide`}
                     >
-                      {showZChargeDeckPanel ? (
-                        <div className="h-full w-full rounded-[24px] border border-white/20 bg-[linear-gradient(135deg,rgba(255,255,255,0.74),rgba(233,239,247,0.95))]">
-                          <ZChargeDeckPanel />
-                        </div>
-                      ) : (
-                        <VisualBlock
-                          visual={activePreviewSlide}
-                          showLabel={false}
-                          elevated={false}
-                          balancedImage
-                          className="h-full w-full rounded-[24px] border-white/20"
-                        />
-                      )}
-                    </motion.div>
-                  </AnimatePresence>
+                      ‹
+                    </button>
+                    <button
+                      type="button"
+                      onClick={goToNextSlide}
+                      className="absolute right-3 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/55 bg-black/42 text-[1.65rem] font-semibold text-white shadow-[0_16px_36px_rgba(0,0,0,0.28)] backdrop-blur-sm transition hover:scale-[1.04] hover:bg-black/56"
+                      aria-label={`Show next ${selectedProject.title} slide`}
+                    >
+                      ›
+                    </button>
+                  </>
+                ) : null}
 
-                  {previewSlides.length > 1 ? (
-                    <div className="absolute inset-x-0 bottom-0 flex items-center justify-between bg-gradient-to-t from-black/28 via-black/6 to-transparent px-4 pb-4 pt-12">
-                      <div className="flex items-center gap-2">
-                        {previewSlides.map((slide, index) => (
-                          <button
-                            type="button"
-                            key={`${selectedProject.slug}-${slide.label}-${index}`}
-                            onClick={() => goToSlide(index)}
-                            className={cn(
-                              "h-2 rounded-full transition-all duration-300",
-                              index === safeActiveSlideIndex
-                                ? "w-8 bg-white"
-                                : "w-2 bg-white/55",
-                            )}
-                            aria-label={`Show ${selectedProject.title} slide ${index + 1}`}
-                            aria-pressed={index === safeActiveSlideIndex}
-                          >
-                            <span className="sr-only">
-                              {selectedProject.title} slide {index + 1}
-                            </span>
-                          </button>
-                        ))}
+                <AnimatePresence mode="wait" initial={false}>
+                  <motion.div
+                    key={`${selectedProject.slug}-${safeActiveSlideIndex}`}
+                    initial={{ opacity: 0, x: 24, scale: 1.02 }}
+                    animate={{ opacity: 1, x: 0, scale: 1 }}
+                    exit={{ opacity: 0, x: -24, scale: 0.985 }}
+                    transition={{ duration: 0.45, ease: "easeOut" }}
+                    className="absolute inset-0"
+                  >
+                    {showZChargeDeckPanel ? (
+                      <div className="h-full w-full rounded-[24px] border border-white/20 bg-[linear-gradient(135deg,rgba(255,255,255,0.74),rgba(233,239,247,0.95))]">
+                        <ZChargeDeckPanel />
                       </div>
-                      <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/88">
-                        {String(safeActiveSlideIndex + 1).padStart(2, "0")} /{" "}
-                        {String(previewSlides.length).padStart(2, "0")}
-                      </span>
+                    ) : (
+                      <VisualBlock
+                        visual={activePreviewSlide}
+                        showLabel={false}
+                        elevated={false}
+                        balancedImage
+                        className="h-full w-full rounded-[24px] border-white/20"
+                      />
+                    )}
+                  </motion.div>
+                </AnimatePresence>
+
+                {previewSlides.length > 1 ? (
+                  <div className="absolute inset-x-0 bottom-0 flex items-center justify-between bg-gradient-to-t from-black/28 via-black/6 to-transparent px-4 pb-4 pt-12">
+                    <div className="flex items-center gap-2">
+                      {previewSlides.map((slide, index) => (
+                        <button
+                          type="button"
+                          key={`${selectedProject.slug}-${slide.label}-${index}`}
+                          onClick={() => goToSlide(index)}
+                          className={cn(
+                            "h-2 rounded-full transition-all duration-300",
+                            index === safeActiveSlideIndex
+                              ? "w-8 bg-white"
+                              : "w-2 bg-white/55",
+                          )}
+                          aria-label={`Show ${selectedProject.title} slide ${index + 1}`}
+                          aria-pressed={index === safeActiveSlideIndex}
+                        >
+                          <span className="sr-only">
+                            {selectedProject.title} slide {index + 1}
+                          </span>
+                        </button>
+                      ))}
                     </div>
-                  ) : null}
-                </div>
+                    <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/88">
+                      {String(safeActiveSlideIndex + 1).padStart(2, "0")} /{" "}
+                      {String(previewSlides.length).padStart(2, "0")}
+                    </span>
+                  </div>
+                ) : null}
               </div>
             </div>
           </div>
+        </div>
       </section>
     </div>
   );

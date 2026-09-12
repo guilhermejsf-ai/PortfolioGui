@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { redirect } from "next/navigation";
-import { WorkIndex } from "@/components/work-index";
-import { getProjectBySlug } from "@/data/projects";
+import { Container } from "@/components/container";
+import { ProjectsSelector } from "@/components/projects-selector";
+import { projects } from "@/data/projects";
 export const metadata: Metadata = {
   title: "Work",
   alternates: { canonical: "/projects" },
@@ -12,7 +12,16 @@ export default async function ProjectsPage({
   searchParams: Promise<{ project?: string }>;
 }) {
   const { project } = await searchParams;
-  if (project && getProjectBySlug(project))
-    redirect(`/projects/${encodeURIComponent(project)}`);
-  return <WorkIndex />;
+  return (
+    <Container className="pb-20 pt-6 sm:pb-24 sm:pt-8">
+      <h1 className="sr-only">My projects</h1>
+      <div id="all-projects">
+        <ProjectsSelector
+          key={project ?? "default"}
+          projects={projects}
+          initialSlug={project}
+        />
+      </div>
+    </Container>
+  );
 }

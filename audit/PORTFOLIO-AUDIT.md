@@ -2,6 +2,11 @@
 
 12 September 2026 · Guilherme Fernandes
 
+## Review revision: original work navigation restored
+
+At the owner’s request, Work again uses the original grouped clickable logos with one project information panel underneath. The homepage work section uses the same selector. This supersedes the card-library recommendation below; the original audit is retained as a record. All 13 projects remain. Standalone project pages are still available through “Full project details.” The selector uses manual gallery controls, and selection, Back navigation, query links, and mobile layout were rechecked. Lint, TypeScript, and production build pass. Previous homepage Lighthouse scores describe the earlier version, not this revised selector layout.
+
+
 ## Main finding
 
 The original portfolio undersells an operator as a collection of brands. The CV contains evidence of company building, growth, funding support, partnerships, and automation; the entry page makes visitors decode unfamiliar logos before learning any of that. The redesign gives a hiring manager a clear introduction, relevant evidence, and a short path into individual projects.
