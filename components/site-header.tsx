@@ -6,8 +6,8 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const professionalLinks = [
-  { href: "/cv", label: "Work" },
-  { href: "/projects", label: "Projects" },
+  { href: "/cv", label: "CV" },
+  { href: "/projects", label: "Work and projects" },
 ];
 const personalLinks = [
   { href: "/story", label: "My story" },
