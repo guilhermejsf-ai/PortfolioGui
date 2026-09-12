@@ -16,10 +16,10 @@ export const siteConfig = {
 };
 
 export const navigation = [
-  { href: "/projects", label: "Work" },
-  { href: "/cv", label: "Experience & CV" },
+  { href: "/cv", label: "Work" },
+  { href: "/projects", label: "Projects" },
   { href: "/story", label: "My story" },
-  { href: "/travel", label: "Travels" },
+  { href: "/travel", label: "My travels" },
   { href: "/contact", label: "Let’s talk" },
 ];
 
