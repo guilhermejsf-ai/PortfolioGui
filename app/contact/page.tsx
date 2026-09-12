@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -15,21 +16,24 @@ const contactCards = [
   {
     eyebrow: "LinkedIn",
     title: "Open profile",
-    description: "Best for opportunities, introductions, and professional context.",
+    description:
+      "Best for opportunities, introductions, and professional context.",
     href: siteConfig.social.linkedin,
     tone: "bg-white/90",
   },
   {
     eyebrow: "Instagram",
     title: "@guilhermejsf",
-    description: "A more personal window into interests, movement, and current energy.",
+    description:
+      "A more personal window into interests, movement, and current energy.",
     href: siteConfig.social.instagram,
     tone: "bg-[linear-gradient(180deg,rgba(255,255,255,0.95),rgba(248,240,246,0.92))]",
   },
   {
     eyebrow: "Phone",
     title: phoneLabel,
-    description: "Useful for direct contact when a faster conversation makes more sense.",
+    description:
+      "Useful for direct contact when a faster conversation makes more sense.",
     href: phoneHref,
     tone: "bg-[linear-gradient(180deg,rgba(255,255,255,0.95),rgba(238,247,241,0.95))]",
   },
@@ -38,6 +42,11 @@ const contactCards = [
 function GmailIcon() {
   return <Image src={betterGmailLogo} alt="" className="h-5 w-5" />;
 }
+
+export const metadata: Metadata = {
+  title: "Contact",
+  alternates: { canonical: "/contact" },
+};
 
 export default function ContactPage() {
   const hasEmail = Boolean(siteConfig.social.email);
@@ -50,8 +59,13 @@ export default function ContactPage() {
           <div className="px-6 py-7 sm:px-8 sm:py-8 lg:px-10 lg:py-9">
             <div className="max-w-3xl">
               <h1 className="font-display text-4xl tracking-tight text-ink sm:text-5xl">
-                Reach out for opportunities, collaborations and anything really.
+                Let’s talk about what you’re building.
               </h1>
+              <p className="mt-5 max-w-2xl text-base leading-8 text-muted">
+                For management, growth, marketing, AI automation, app projects,
+                or a new collaboration. I’m always interested in a good
+                conversation.
+              </p>
 
               <div className="mt-8 flex flex-wrap gap-3">
                 {hasEmail ? (

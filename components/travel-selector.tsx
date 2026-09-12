@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { startTransition, useEffect, useMemo, useState } from "react";
-import instagramIcon from "@/stores/instagram-vector-logo-icon-social-media-logotype_901408-392.avif";
+import { startTransition, useMemo, useState } from "react";
+const instagramIcon = "/assets/shared/instagram.webp";
 
 import { TravelEntry, TravelGroup } from "@/data/travel";
 import { cn } from "@/lib/utils";
@@ -908,22 +908,8 @@ export function TravelSelector({ groups }: TravelSelectorProps) {
 
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
-  useEffect(() => {
-    setActiveSlideIndex(
-      getInitialSlideIndexForSelectedSlug(
-        selectedSlug,
-        selectedEntry?.previewSlides ?? [],
-      ),
-    );
-  }, [selectedEntry?.previewSlides, selectedSlug]);
-
-  const imageSlides = selectedEntry?.previewSlides.filter((slide) => slide.imageSrc) ?? [];
-
-  useEffect(() => {
-    if (activeSlideIndex >= imageSlides.length) {
-      setActiveSlideIndex(0);
-    }
-  }, [activeSlideIndex, imageSlides.length]);
+  const imageSlides =
+    selectedEntry?.previewSlides.filter((slide) => slide.imageSrc) ?? [];
 
   if (!selectedEntry) {
     return null;
@@ -931,7 +917,8 @@ export function TravelSelector({ groups }: TravelSelectorProps) {
 
   const selectedTheme = getEntryTheme(selectedEntry);
   const hasGroupSlider =
-    (selectedEntry.group === "roadtrips" || selectedEntry.group === "eu-projects") &&
+    (selectedEntry.group === "roadtrips" ||
+      selectedEntry.group === "eu-projects") &&
     imageSlides.length > 1;
   const currentSlide = imageSlides[activeSlideIndex] ?? imageSlides[0];
   const visitedCities = getVisitedCities(selectedEntry);
@@ -952,10 +939,21 @@ export function TravelSelector({ groups }: TravelSelectorProps) {
         <button
           type="button"
           onClick={() => {
-            startTransition(() => setSelectedSlug(entry.slug));
+            startTransition(() => {
+              setSelectedSlug(entry.slug);
+              const nextEntry = orderedEntries.find(
+                (item) => item.slug === getCanonicalTravelSlug(entry.slug),
+              );
+              setActiveSlideIndex(
+                getInitialSlideIndexForSelectedSlug(
+                  entry.slug,
+                  nextEntry?.previewSlides ?? [],
+                ),
+              );
+            });
           }}
           className={cn(
-            "flex items-center justify-center rounded-[18px] p-1.5 transition duration-300 sm:p-2",
+            "flex w-20 flex-col items-center justify-center gap-2 rounded-[12px] p-1.5 transition duration-300 sm:p-2",
             isActive
               ? "bg-white shadow-[0_10px_24px_rgba(15,23,42,0.08)]"
               : "hover:-translate-y-0.5",
@@ -975,10 +973,10 @@ export function TravelSelector({ groups }: TravelSelectorProps) {
           >
             <span className="leading-none">{entry.flag}</span>
           </div>
+          <span className="text-[10px] leading-4 text-muted">
+            {entry.hoverLabel}
+          </span>
         </button>
-        <span className="pointer-events-none absolute left-1/2 top-full z-10 mt-1.5 -translate-x-1/2 whitespace-nowrap text-[11px] font-medium tracking-[0.01em] text-muted opacity-0 transition-all duration-200 group-hover:translate-y-0.5 group-hover:opacity-100 group-focus-within:translate-y-0.5 group-focus-within:opacity-100">
-          {entry.hoverLabel}
-        </span>
       </div>
     );
   };
@@ -1000,14 +998,18 @@ export function TravelSelector({ groups }: TravelSelectorProps) {
 
               {group.slug === "roadtrips" ? (
                 <div className="mt-2.5 flex flex-wrap items-center gap-1.5 md:gap-2">
-                  <div className="-space-x-1 flex items-center sm:-space-x-1.5">
+                  <div className="flex items-center gap-1">
                     {group.items
                       .filter((entry) =>
-                        ["england-uk-roadtrip", "wales-uk-roadtrip", "scotland-uk-roadtrip"].includes(entry.slug),
+                        [
+                          "england-uk-roadtrip",
+                          "wales-uk-roadtrip",
+                          "scotland-uk-roadtrip",
+                        ].includes(entry.slug),
                       )
                       .map(renderSelectorItem)}
                   </div>
-                  <div className="-space-x-1 flex items-center sm:-space-x-1.5">
+                  <div className="flex items-center gap-1">
                     {group.items
                       .filter((entry) =>
                         [
@@ -1075,22 +1077,32 @@ export function TravelSelector({ groups }: TravelSelectorProps) {
                 <div className="border-b border-black/6 pb-3 pt-1">
                   <div className="space-y-0 border-b border-black/6 pb-3">
                     <div className="py-3 text-sm leading-7 text-ink/82 sm:text-[0.96rem]">
-                      <span>EU projects shaped a big part of who I became.</span>
+                      <span>
+                        EU projects shaped a big part of who I became.
+                      </span>
                     </div>
                     <div className="border-b border-black/6 py-3 text-sm leading-7 text-ink/82 sm:text-[0.96rem]">
                       <span>
-                        I worked on important topics, met people from completely different backgrounds, and found a different sense of community that I did not really have before. Those projects made me very good at public speaking, leadership, teaching, listening, adapting, and learning from everyone around me.
+                        I worked on important topics, met people from completely
+                        different backgrounds, and found a different sense of
+                        community that I did not really have before. Those
+                        projects made me very good at public speaking,
+                        leadership, teaching, listening, adapting, and learning
+                        from everyone around me.
                       </span>
                     </div>
                     <div className="py-3 text-sm leading-7 text-ink/82 sm:text-[0.96rem]">
                       <span>
-                        More than just good experiences, they became an important part of my path. They helped me grow my career, expand my network, and, most importantly, become a more open, confident and ultimately more human.
+                        More than just good experiences, they became an
+                        important part of my path. They helped me grow my
+                        career, expand my network, and, most importantly, become
+                        a more open, confident and ultimately more human.
                       </span>
                     </div>
                   </div>
 
                   <p className="mt-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-accent-deep">
-                    List of the projects I've participated in
+                    List of the projects I&apos;ve participated in
                   </p>
                   <div className="mt-3 space-y-0">
                     {euProjects.map((project) => (
@@ -1214,7 +1226,6 @@ export function TravelSelector({ groups }: TravelSelectorProps) {
                     </div>
                   ) : null}
                 </div>
-
               </div>
             ) : (
               <div

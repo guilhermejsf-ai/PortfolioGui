@@ -5,3 +5,9 @@ node_modules
 .env.local
 .vercel
 .DS_Store
+
+# Local audit screenshots and runtime-specific verification helpers
+audit/*.png
+audit/check-*.cjs
+audit/external-links.txt
+audit/lighthouse.json

@@ -1,5 +1,4 @@
-import { redirect } from "next/navigation";
-
+import { WorkIndex } from "@/components/work-index";
 export default function HomePage() {
-  redirect("/projects");
+  return <WorkIndex />;
 }

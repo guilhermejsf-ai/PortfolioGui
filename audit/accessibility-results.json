@@ -1,0 +1,22 @@
+[
+  {
+    "route": "/",
+    "violations": []
+  },
+  {
+    "route": "/projects/racefiets013",
+    "violations": []
+  },
+  {
+    "route": "/cv",
+    "violations": []
+  },
+  {
+    "route": "/contact",
+    "violations": []
+  },
+  {
+    "route": "/travel",
+    "violations": []
+  }
+]

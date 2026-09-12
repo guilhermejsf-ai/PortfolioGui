@@ -9,6 +9,14 @@ import { siteConfig } from "@/data/site";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.baseUrl),
+  openGraph: {
+    type: "website",
+    title: "Guilherme Fernandes | Growth, Operations & AI",
+    description: siteConfig.description,
+    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
+  },
+  twitter: { card: "summary_large_image" },
   title: {
     default: `${siteConfig.name} | Portfolio`,
     template: `%s | ${siteConfig.name}`,
@@ -29,8 +37,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen bg-surface text-ink antialiased">
+        <a href="#main-content" className="skip-link">
+          Skip to content
+        </a>
         <SiteHeader />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <PortfolioOfferSection />
         <ReachOutSection />
         <SiteFooter />
