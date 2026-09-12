@@ -7,6 +7,10 @@ import {
   projects,
 } from "@/data/projects";
 import { ProjectGallery } from "@/components/project-gallery";
+import {
+  ProjectEvidence,
+  ProjectApproach,
+} from "@/components/project-evidence";
 import { siteConfig } from "@/data/site";
 type Props = { params: Promise<{ slug: string }> };
 export function generateStaticParams() {
@@ -77,8 +81,8 @@ export default async function ProjectPage({ params }: Props) {
             <strong>{p.category}</strong>
           </div>
           <div>
-            <span>Context</span>
-            <strong>{p.detailCard.meta ?? p.section}</strong>
+            <span>Period</span>
+            <strong>{p.year}</strong>
           </div>
         </div>
         <div className="button-row">
@@ -95,22 +99,15 @@ export default async function ProjectPage({ params }: Props) {
           ))}
         </div>
       </header>
-      <section className="case-outcome">
-        <p className="eyebrow">{p.detailCard.outcome.title}</p>
-        <p>{p.detailCard.outcome.text}</p>
-        {p.detailCard.outcome.proofPoints && (
-          <ul>
-            {p.detailCard.outcome.proofPoints.map((x) => (
-              <li key={x}>{x}</li>
-            ))}
-          </ul>
-        )}
-        {p.note && <p className="case-note">{p.note}</p>}
-      </section>
+      <ProjectEvidence project={p} />
+      {p.note && <p className="case-note">{p.note}</p>}
+      <ProjectGallery slides={slides} title={p.title} />
       <div className="case-body">
         <section>
           <p className="eyebrow">The work</p>
-          <h2>What I did</h2>
+          <h2>
+            {p.group === "Current work" ? "My work so far" : "What I did"}
+          </h2>
           <ul>
             {p.detailCard.whatIDid.map((x) => (
               <li key={x}>{x}</li>
@@ -118,6 +115,7 @@ export default async function ProjectPage({ params }: Props) {
           </ul>
         </section>
         <section>
+          <ProjectApproach project={p} />
           <p className="eyebrow">Context &amp; contribution</p>
           <h2>Behind the project</h2>
           <p>{p.whatItIs}</p>
@@ -135,7 +133,7 @@ export default async function ProjectPage({ params }: Props) {
           </details>
         </section>
       </div>
-      <ProjectGallery slides={slides} title={p.title} />
+
       {p.slug === "zcharge" && (
         <section className="case-outcome">
           <p className="eyebrow">Private material</p>

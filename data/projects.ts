@@ -1,3 +1,5 @@
+import { currentWork } from "./current-work";
+
 export type ProjectSection =
   | "Founded / Built"
   | "Built for Companies"
@@ -5,6 +7,7 @@ export type ProjectSection =
   | "Product Experiments";
 
 export type ProjectGroup =
+  | "Current work"
   | "Featured"
   | "Co-Founded Ventures"
   | "Consultancy"
@@ -44,7 +47,7 @@ export type ProjectActions = {
 };
 
 export type ProjectDetailOutcome = {
-  title: "Outcome" | "Snapshot";
+  title: "Outcome" | "Snapshot" | "Current focus" | "Work so far";
   text: string;
   proofPoints?: string[];
 };
@@ -96,6 +99,7 @@ export const projectSections: ProjectSection[] = [
 ];
 
 export const projectGroupOrder: ProjectGroup[] = [
+  "Current work",
   "Featured",
   "Co-Founded Ventures",
   "Consultancy",
@@ -105,6 +109,7 @@ export const projectGroupOrder: ProjectGroup[] = [
 ];
 
 export const projects: Project[] = [
+  ...currentWork,
   {
     slug: "racefiets013",
     title: "Racefiets013",
