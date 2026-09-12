@@ -1,0 +1,299 @@
+{
+  "results": [
+    {
+      "width": 390,
+      "route": "/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/projects/racefiets013",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/projects/nordensa",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/projects/umedicu",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/projects/nexdoo",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/projects/safe-travel",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/projects/habits",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/projects/mumzers",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/projects/pocket-tours",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/projects/zcharge",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/projects/finance",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/projects/footy",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/projects/loves-conception",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/projects/vlogui",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/cv",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/contact",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/travel",
+      "status": 200,
+      "overflow": false,
+      "h1": 0,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/story",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/projects/racefiets013",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/projects/nordensa",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/projects/umedicu",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/projects/nexdoo",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/projects/safe-travel",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/projects/habits",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/projects/mumzers",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/projects/pocket-tours",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/projects/zcharge",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/projects/finance",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/projects/footy",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/projects/loves-conception",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/projects/vlogui",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/cv",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/contact",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/travel",
+      "status": 200,
+      "overflow": false,
+      "h1": 0,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/story",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "broken": []
+    }
+  ],
+  "errors": [],
+  "interactionChecks": [
+    "Mobile menu to CV",
+    "Gallery next image",
+    "Legacy project URL",
+    "Unknown project 404"
+  ]
+}

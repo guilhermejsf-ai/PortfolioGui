@@ -2,24 +2,25 @@ export const siteConfig = {
   name: "Guilherme Fernandes",
   tagline: "I create brands, products, systems and growth.",
   description:
-    "A premium personal portfolio for Guilherme Fernandes, presenting founder-led work across brands, products, systems, growth, and digital experiences.",
+    "Guilherme Fernandes — startup management, growth, operations, and AI-assisted automation. Explore company results, ventures, apps, and creative work.",
   intro:
     "Entrepreneur and builder focused on turning ideas into clear brands, useful products, sharper systems, and growth-ready foundations.",
-  baseUrl: "https://example.com",
+  baseUrl: "https://portfolio-gui-eosin.vercel.app",
   cvPdf: "/cv/Guilherme_Fernandes_Resume.pdf" as string | null,
   social: {
     instagram: "https://www.instagram.com/guilhermejsf",
-    linkedin: "https://www.linkedin.com/in/guilherme-fernandes-9aa090179/" as string | null,
+    linkedin: "https://www.linkedin.com/in/guilherme-fernandes-9aa090179/" as
+      string | null,
     email: "guilherme.fernandes.biz@gmail.com" as string | null,
   },
 };
 
 export const navigation = [
-  { href: "/story", label: "my Story" },
-  { href: "/projects", label: "my Projects" },
-  { href: "/travel", label: "my Travels" },
-  { href: "/cv", label: "my CV" },
-  { href: "/contact", label: "my Contacts" },
+  { href: "/projects", label: "Work" },
+  { href: "/cv", label: "Experience & CV" },
+  { href: "/story", label: "My story" },
+  { href: "/travel", label: "Travels" },
+  { href: "/contact", label: "Let’s talk" },
 ];
 
 export const capabilities = [
@@ -122,8 +123,7 @@ export const storyTimeline = [
 export const travelContent = {
   intro:
     "Travel is not a side note here. It is part of the way Guilherme sees ambition, design, people, and possibility. So far that perspective has been shaped by 30+ countries across 4 continents.",
-  note:
-    "Version 1 keeps this page intentionally gallery-first. It leaves room for future additions like a map, country list, and travel notes without overcomplicating the first release.",
+  note: "Version 1 keeps this page intentionally gallery-first. It leaves room for future additions like a map, country list, and travel notes without overcomplicating the first release.",
   gallery: [
     "Add city street travel photo here",
     "Add landscape travel photo here",
@@ -188,6 +188,5 @@ export const cvContent = {
 export const contactContent = {
   intro:
     "For opportunities, collaborations, freelance work, or modern portfolio and website projects, this is the place to reach out.",
-  note:
-    "Guilherme is open to thoughtful opportunities, collaborations, and selected portfolio or website work.",
+  note: "Guilherme is open to thoughtful opportunities, collaborations, and selected portfolio or website work.",
 };

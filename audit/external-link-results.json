@@ -1,0 +1,77 @@
+[
+  {
+    "url": "https://racefiets013.com/",
+    "status": 200,
+    "destination": "https://racefiets013.com/"
+  },
+  {
+    "url": "https://www.instagram.com/racefiets013/",
+    "status": 200,
+    "destination": "https://www.instagram.com/racefiets013/"
+  },
+  {
+    "url": "http://nordensa.com",
+    "status": 200,
+    "destination": "https://www.nordensa.com/"
+  },
+  {
+    "url": "https://play.google.com/store/apps/details?id=com.nordensa.application&pcampaignid=web_share",
+    "status": 200,
+    "destination": "https://play.google.com/store/apps/details?id=com.nordensa.application&pcampaignid=web_share"
+  },
+  {
+    "url": "https://apps.apple.com/ro/app/nordensa-fan-powered-football/id1661642894",
+    "status": 200,
+    "destination": "https://apps.apple.com/ro/app/nordensa-fan-powered-football/id1661642894"
+  },
+  {
+    "url": "https://www.instagram.com/nordensafootball/",
+    "status": 200,
+    "destination": "https://www.instagram.com/nordensafootball/"
+  },
+  {
+    "url": "https://nordensa.com/",
+    "status": 200,
+    "destination": "https://www.nordensa.com/"
+  },
+  {
+    "url": "https://apps.apple.com/pt/app/umedicu/id6738693142",
+    "status": 200,
+    "destination": "https://apps.apple.com/pt/app/umedicu/id6738693142"
+  },
+  {
+    "url": "https://play.google.com/store/apps/details?id=digital.load.umedicu&hl=pt_PT",
+    "status": 200,
+    "destination": "https://play.google.com/store/apps/details?id=digital.load.umedicu&hl=pt_PT"
+  },
+  {
+    "url": "https://umedicu.com/",
+    "status": 200,
+    "destination": "https://umedicu.com/"
+  },
+  {
+    "url": "https://www.instagram.com/umedicu.pt/",
+    "status": 200,
+    "destination": "https://www.instagram.com/umedicu.pt/"
+  },
+  {
+    "url": "https://www.instagram.com/nexdooparties/",
+    "status": 200,
+    "destination": "https://www.instagram.com/nexdooparties/"
+  },
+  {
+    "url": "https://safetravel-two.vercel.app/index.html#",
+    "status": 200,
+    "destination": "https://safetravel-two.vercel.app/index.html"
+  },
+  {
+    "url": "https://my-ha-bits.vercel.app/today",
+    "status": 200,
+    "destination": "https://my-ha-bits.vercel.app/today"
+  },
+  {
+    "url": "https://www.amazon.com.br/Loves-conception-Guilherme-Fernandes/dp/B0F255BJ2M",
+    "status": 200,
+    "destination": "https://www.amazon.com.br/Loves-conception-Guilherme-Fernandes/dp/B0F255BJ2M"
+  }
+]

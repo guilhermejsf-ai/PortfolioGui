@@ -1,0 +1,28 @@
+{
+  "url": "http://localhost:3101/",
+  "fetchTime": "2026-09-12T17:57:22.811Z",
+  "environment": {
+    "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Mobile Safari/537.36",
+    "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+    "benchmarkIndex": 4477,
+    "credits": {
+      "axe-core": "4.13.0"
+    }
+  },
+  "configSettings": {
+    "formFactor": "mobile",
+    "throttlingMethod": "simulate"
+  },
+  "scores": {
+    "performance": 98,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  "metrics": {
+    "first-contentful-paint": "0.9 s",
+    "largest-contentful-paint": "2.4 s",
+    "total-blocking-time": "0 ms",
+    "cumulative-layout-shift": "0"
+  }
+}
