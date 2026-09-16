@@ -12,7 +12,7 @@ type VisualBlockProps = {
 };
 
 const toneClasses = {
-  white: "bg-white",
+  white: "bg-panel",
   blue: "bg-accent-deep",
   neutral: "bg-panel-alt",
   warm: "bg-[#f7efe7]",
@@ -63,7 +63,7 @@ export function VisualBlock({
         </>
       ) : (
         <div className="flex h-full min-h-[220px] items-center justify-center p-6 text-center">
-          <div className="max-w-xs rounded-[20px] border border-dashed border-line bg-white/65 px-5 py-4 backdrop-blur">
+          <div className="max-w-xs rounded-[20px] border border-dashed border-line bg-panel px-5 py-4 backdrop-blur">
             <p className="text-sm font-semibold text-ink">{visual.label}</p>
           </div>
         </div>

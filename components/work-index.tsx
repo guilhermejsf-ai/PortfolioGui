@@ -38,10 +38,10 @@ export function WorkIndex() {
         <aside className="profile-note">
           <div className="portrait-wrap">
             <Image
-              src="/assets/shared/me.jpeg"
+              src="/assets/shared/portrait.png"
               alt="Guilherme Fernandes"
               fill
-              sizes="(max-width: 700px) 140px, 260px"
+              sizes="(max-width: 700px) 100vw, 400px"
               priority
               className="object-cover"
             />

@@ -17,7 +17,7 @@ export default function GlobalError({
     <html lang="en">
       <body className="min-h-screen bg-surface text-ink antialiased">
         <main className="mx-auto flex min-h-screen w-full max-w-3xl items-center px-6 py-20 sm:px-8">
-          <div className="w-full rounded-[32px] border border-line bg-white/90 p-8 shadow-card sm:p-10">
+          <div className="w-full rounded-[32px] border border-line bg-panel p-8 shadow-card sm:p-10">
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-accent-deep">
               Runtime Error
             </p>
@@ -33,14 +33,14 @@ export default function GlobalError({
               <button
                 type="button"
                 onClick={reset}
-                className="rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white transition hover:bg-ink/90"
+                className="rounded-full bg-ink px-5 py-3 text-sm font-semibold text-[#27201d] transition hover:bg-ink/90"
               >
                 Try again
               </button>
               <button
                 type="button"
                 onClick={() => window.location.reload()}
-                className="rounded-full border border-line bg-white/70 px-5 py-3 text-sm font-semibold text-ink transition hover:border-accent/35 hover:bg-white"
+                className="rounded-full border border-line bg-panel px-5 py-3 text-sm font-semibold text-ink transition hover:border-accent/35 hover:bg-panel"
               >
                 Refresh page
               </button>

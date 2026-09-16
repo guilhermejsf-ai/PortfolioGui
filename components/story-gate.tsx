@@ -25,7 +25,7 @@ export function StoryGate({ children }: StoryGateProps) {
       </div>
 
       <div className="absolute inset-0 flex items-start justify-center px-4 pt-8 sm:pt-12">
-        <div className="w-full max-w-md rounded-[32px] border border-white/70 bg-white/90 p-7 shadow-[0_30px_80px_rgba(17,24,39,0.18)] backdrop-blur-xl">
+        <div className="w-full max-w-md rounded-[32px] border border-white/70 bg-panel p-7 shadow-[0_30px_80px_rgba(17,24,39,0.18)] backdrop-blur-xl">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent-deep">
             Private page
           </p>
@@ -50,7 +50,7 @@ export function StoryGate({ children }: StoryGateProps) {
 
             <button
               type="submit"
-              className="w-full rounded-2xl bg-ink px-4 py-3 text-sm font-medium text-white transition hover:opacity-90"
+              className="w-full rounded-2xl bg-ink px-4 py-3 text-sm font-medium text-[#27201d] transition hover:opacity-90"
             >
               Enter
             </button>

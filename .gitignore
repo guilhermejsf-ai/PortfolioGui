@@ -11,3 +11,4 @@ audit/*.png
 audit/check-*.cjs
 audit/external-links.txt
 audit/lighthouse.json
+.env*

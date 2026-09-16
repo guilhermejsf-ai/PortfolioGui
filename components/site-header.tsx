@@ -52,7 +52,7 @@ export function SiteHeader() {
             <span className="name-first">Guilherme</span>
             <span className="header-portrait">
               <Image
-                src="/assets/shared/me.jpeg"
+                src="/assets/shared/portrait.png"
                 width={88}
                 height={88}
                 alt=""

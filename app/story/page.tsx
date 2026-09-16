@@ -33,7 +33,7 @@ export default function StoryPage() {
   return (
     <Container className="pb-20 pt-6 sm:pb-24 sm:pt-8">
       <StoryGate>
-        <section className="relative overflow-hidden rounded-[36px] border border-line/70 bg-[linear-gradient(135deg,rgba(255,255,255,0.9),rgba(221,231,242,0.78))] px-6 py-10 shadow-[0_24px_70px_rgba(61,95,131,0.12)] sm:px-8 lg:px-12 lg:py-14">
+        <section className="relative overflow-hidden rounded-[36px] border border-line/70 bg-[linear-gradient(135deg,#342925,#593e31)] px-6 py-10 shadow-[0_24px_70px_rgba(61,95,131,0.12)] sm:px-8 lg:px-12 lg:py-14">
           <div className="absolute inset-x-0 top-0 h-48 bg-[radial-gradient(circle_at_top,rgba(111,143,179,0.2),transparent_70%)]" />
 
           <div className="relative max-w-3xl">
@@ -53,7 +53,7 @@ export default function StoryPage() {
             {roadmapSteps.map((step, index) => (
               <article
                 key={step.title}
-                className="rounded-[28px] border border-white/70 bg-white/72 p-6 shadow-[0_12px_35px_rgba(17,24,39,0.08)]"
+                className="rounded-[28px] border border-white/70 bg-panel p-6 shadow-[0_12px_35px_rgba(17,24,39,0.08)]"
               >
                 <div className="flex items-center justify-between gap-4">
                   <p className="text-xs font-semibold uppercase tracking-[0.24em] text-accent-deep">

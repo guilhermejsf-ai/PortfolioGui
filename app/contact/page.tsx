@@ -19,7 +19,7 @@ const contactCards = [
     description:
       "Best for opportunities, introductions, and professional context.",
     href: siteConfig.social.linkedin,
-    tone: "bg-white/90",
+    tone: "bg-panel",
   },
   {
     eyebrow: "Instagram",
@@ -27,7 +27,7 @@ const contactCards = [
     description:
       "A more personal window into interests, movement, and current energy.",
     href: siteConfig.social.instagram,
-    tone: "bg-[linear-gradient(180deg,rgba(255,255,255,0.95),rgba(248,240,246,0.92))]",
+    tone: "bg-panel",
   },
   {
     eyebrow: "Phone",
@@ -35,7 +35,7 @@ const contactCards = [
     description:
       "Useful for direct contact when a faster conversation makes more sense.",
     href: phoneHref,
-    tone: "bg-[linear-gradient(180deg,rgba(255,255,255,0.95),rgba(238,247,241,0.95))]",
+    tone: "bg-panel",
   },
 ].filter((card) => Boolean(card.href));
 
@@ -55,7 +55,7 @@ export default function ContactPage() {
   return (
     <Container className="pb-12 pt-8 lg:pb-14 lg:pt-10">
       <FadeIn>
-        <div className="overflow-hidden rounded-[36px] border border-line/70 bg-[linear-gradient(135deg,rgba(255,255,255,0.94),rgba(227,235,244,0.88))] shadow-card">
+        <div className="overflow-hidden rounded-[36px] border border-line/70 bg-[linear-gradient(135deg,#342925,#593e31)] shadow-card">
           <div className="px-6 py-7 sm:px-8 sm:py-8 lg:px-10 lg:py-9">
             <div className="max-w-3xl">
               <h1 className="font-display text-4xl tracking-tight text-ink sm:text-5xl">
@@ -71,9 +71,9 @@ export default function ContactPage() {
                 {hasEmail ? (
                   <a
                     href={emailHref}
-                    className="inline-flex items-center gap-2 rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5"
+                    className="inline-flex items-center gap-2 rounded-full bg-ink px-5 py-3 text-sm font-semibold text-[#27201d] transition hover:-translate-y-0.5"
                   >
-                    <span className="rounded-full bg-white p-1">
+                    <span className="rounded-full bg-panel p-1">
                       <GmailIcon />
                     </span>
                     Email
@@ -82,7 +82,7 @@ export default function ContactPage() {
 
                 <a
                   href={phoneHref}
-                  className="inline-flex items-center rounded-full border border-line bg-white/80 px-5 py-3 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-accent/40 hover:text-accent-deep"
+                  className="inline-flex items-center rounded-full border border-line bg-panel px-5 py-3 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-accent/40 hover:text-accent-deep"
                 >
                   Call me
                 </a>
@@ -92,7 +92,7 @@ export default function ContactPage() {
                     href={siteConfig.cvPdf as string}
                     prefetch={false}
                     target="_blank"
-                    className="inline-flex items-center rounded-full border border-line bg-white/80 px-5 py-3 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-accent/40 hover:text-accent-deep"
+                    className="inline-flex items-center rounded-full border border-line bg-panel px-5 py-3 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-accent/40 hover:text-accent-deep"
                   >
                     Open CV
                   </Link>
@@ -115,7 +115,7 @@ export default function ContactPage() {
               <div>
                 <div className="flex items-center gap-2">
                   {card.eyebrow === "Gmail" ? (
-                    <span className="rounded-full bg-white/90 p-1 shadow-sm">
+                    <span className="rounded-full bg-panel p-1 shadow-sm">
                       <GmailIcon />
                     </span>
                   ) : null}
