@@ -15,7 +15,7 @@
 .actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 24px; margin-top: 32px; }
 .primary { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px 22px; border-radius: 999px; background: #245563; color: #fff; font-size: 15px; font-weight: 600; transition: background .2s ease; }
 .primary:hover { background: #1b414c; }
-.secondary { font-size: 15px; font-weight: 500; text-decoration: underline; text-underline-offset: 5px; }
+.secondary { display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 500; text-decoration: underline; text-underline-offset: 5px; }
 .secondary:hover { color: #245563; }
 .primary:focus-visible, .secondary:focus-visible { outline: 3px solid #245563; outline-offset: 4px; }
 .note { margin-top: auto; padding-top: 46px; font-size: 13px; line-height: 1.5; color: var(--muted); }

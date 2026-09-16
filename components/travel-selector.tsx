@@ -1192,7 +1192,7 @@ export function TravelSelector({ groups }: TravelSelectorProps) {
           <div className="flex min-w-0 flex-col gap-4 xl:items-end xl:pt-4">
             {currentSlide?.imageSrc ? (
               <div className="flex w-full max-w-[30rem] flex-col items-center gap-3 xl:items-end">
-                <div className="relative flex justify-center overflow-hidden rounded-[26px] xl:justify-end">
+                <div className="relative flex w-full justify-center overflow-hidden rounded-[26px] xl:justify-end">
                   {hasGroupSlider ? (
                     <>
                       <button
@@ -1227,33 +1227,29 @@ export function TravelSelector({ groups }: TravelSelectorProps) {
                     alt={currentSlide.imageAlt ?? currentSlide.title}
                     width={900}
                     height={1200}
-                    sizes="(max-width: 1280px) 38vw, 32vw"
-                    className="h-auto w-auto max-h-[34rem] rounded-[26px] object-contain"
+                    sizes="(max-width: 640px) calc(100vw - 80px), (max-width: 1280px) 480px, 32vw"
+                    className="h-auto w-full max-h-[34rem] rounded-[26px] object-contain"
                   />
 
                   {hasGroupSlider ? (
                     <div className="absolute inset-x-0 bottom-0 flex items-center justify-between bg-gradient-to-t from-black/28 via-black/6 to-transparent px-4 pb-4 pt-12">
-                      <div className="flex items-center gap-2">
+                      <div className="flex min-w-0 items-center overflow-x-auto">
                         {imageSlides.map((slide, index) => (
                           <button
                             key={`${selectedEntry.slug}-${slide.title}-${index}`}
                             type="button"
                             onClick={() => setActiveSlideIndex(index)}
-                            className={cn(
-                              "h-2 rounded-full transition-all duration-300",
-                              index === activeSlideIndex
-                                ? "w-8 bg-white"
-                                : "w-2 bg-white/55",
-                            )}
+                            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full"
                             aria-label={`Show ${slide.title}`}
                             aria-pressed={index === activeSlideIndex}
                             title={slide.title}
                           >
+                            <span aria-hidden="true" className={cn("h-2 rounded-full transition-all duration-300", index === activeSlideIndex ? "w-8 bg-white" : "w-2 bg-white/55")} />
                             <span className="sr-only">{slide.title}</span>
                           </button>
                         ))}
                       </div>
-                      <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/88">
+                      <span className="shrink-0 pl-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/88">
                         {String(activeSlideIndex + 1).padStart(2, "0")} /{" "}
                         {String(imageSlides.length).padStart(2, "0")}
                       </span>

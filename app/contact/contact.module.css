@@ -28,7 +28,7 @@
 .email:hover { background: #1b414c; }
 .emailTop { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 .email h2 { margin-top: 28px; font-size: 42px; letter-spacing: -.045em; line-height: 1.15; font-weight: 500; }
-.email p { margin-top: 12px; color: #e7f1f4; font-size: 16px; line-height: 1.6; white-space: nowrap; }
+.email p { margin-top: 12px; color: #e7f1f4; font-size: 16px; line-height: 1.6; }
 .address { display: block; margin-top: 36px; padding-top: 20px; border-top: 1px solid #ffffff45; font-size: clamp(16px, 1.55vw, 20px); line-height: 1.5; overflow-wrap: anywhere; text-decoration: underline; text-underline-offset: 5px; text-decoration-color: #ffffff70; }
 .links { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; border-top: 1px solid var(--line); }
 .link { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 20px 8px;  transition: color .2s ease, background .2s ease; }
@@ -41,9 +41,6 @@
   .page { grid-template-columns: minmax(0, 1fr); max-width: 640px; padding: 16px 32px 56px; gap: 32px; }
   .intro h1 { font-size: 42px; }
   .email { padding: 24px; }
-}
-@media (max-width: 440px) {
-  .email p { white-space: normal; }
 }
 @media (max-width: 720px) {
   .page { grid-template-columns: minmax(0, 1fr); max-width: 560px; padding: 8px 24px 40px; gap: 36px; }
