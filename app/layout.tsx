@@ -12,7 +12,6 @@ export const metadata: Metadata = {
     type: "website",
     title: "Guilherme Fernandes | Growth, Operations & AI",
     description: siteConfig.description,
-    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: { card: "summary_large_image" },
   title: {
@@ -21,8 +20,7 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   icons: {
-    icon: siteConfig.portrait,
-    shortcut: siteConfig.portrait,
+    icon: { url: "/icon?v=portrait-circle-1", type: "image/png", sizes: "64x64" },
     apple: siteConfig.portrait,
   },
 };
