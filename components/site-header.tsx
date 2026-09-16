@@ -25,10 +25,10 @@ export function SiteHeader() {
                 {label}
               </Link>
             ))}
+            <Link href="/contact" className="header-contact-link" aria-current={pathname === "/contact" ? "page" : undefined}>Contact me</Link>
           </div>
         </div>
         <div className="header-actions">
-          <Link href="/contact" className="header-contact-link" aria-current={pathname === "/contact" ? "page" : undefined}>Contact me</Link>
           <Link href="/cv" className="header-cv-link" aria-current={pathname === "/cv" ? "page" : undefined}>CV</Link>
         </div>
       </nav>
