@@ -30,21 +30,22 @@ export default function CvPage() {
           </Link>
         </div>
       </div>
-      <a
+      {siteConfig.cvPreviewPages.map((src, index) => <a
+        key={src}
         href={siteConfig.cvPdf!}
         target="_blank"
         rel="noreferrer"
         className="relative mx-auto mt-6 block max-w-3xl border border-line bg-white"
       >
         <Image
-          src={`${siteConfig.cvPdf}.png`}
-          alt="CV preview. Open or download the full PDF with the buttons above."
-          width={900}
-          height={1273}
+          src={src}
+          alt={`CV preview, page ${index + 1} of ${siteConfig.cvPreviewPages.length}. Open or download the full PDF with the buttons above.`}
+          width={1200}
+          height={1699}
           sizes="(max-width:800px) 95vw, 768px"
           className="h-auto w-full"
         />
-      </a>
+      </a>)}
     </div>
   );
 }

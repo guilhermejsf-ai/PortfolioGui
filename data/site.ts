@@ -7,7 +7,11 @@ export const siteConfig = {
   intro:
     "Founder and operator turning early ideas into useful products, partnerships, and practical systems.",
   baseUrl: "https://portfolio-gui-eosin.vercel.app",
-  cvPdf: "/cv/Guilherme_Fernandes_Resume.pdf" as string | null,
+  cvPdf: "/cv/Guilherme_Fernandes_CV.pdf" as string | null,
+  cvPreviewPages: [
+    "/cv/Guilherme_Fernandes_CV-page-1.png",
+    "/cv/Guilherme_Fernandes_CV-page-2.png",
+  ],
   social: {
     instagram: "https://www.instagram.com/guilhermejsf",
     linkedin: "https://www.linkedin.com/in/guilherme-fernandes-9aa090179/" as
