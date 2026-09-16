@@ -8,11 +8,10 @@ export function ReachOutSection({ embedded = false }: { embedded?: boolean }) {
     <section className="reach-section">
       <div className="reach-inner">
         <div>
-          <p className="eyebrow">Have something in mind?</p>
-          <h2>Feel free to reach out at any time!</h2>
+          <p className="eyebrow">Let’s talk</p>
+          <h2>Have a project or opportunity in mind?</h2>
           <p>
-            Open the full resume, download it directly, or get in touch through
-            the links.
+            Email me with a little context about the work and what you need.
           </p>
         </div>
         <div className="reach-actions">
@@ -20,7 +19,7 @@ export function ReachOutSection({ embedded = false }: { embedded?: boolean }) {
             className="email-address"
             href={`mailto:${siteConfig.social.email}`}
           >
-            {siteConfig.social.email} ↗
+            {siteConfig.social.email}
           </a>
           <div className="button-row">
             <a href={`mailto:${siteConfig.social.email}`}>Email</a>

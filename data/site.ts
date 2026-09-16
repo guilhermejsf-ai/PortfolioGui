@@ -1,10 +1,11 @@
 export const siteConfig = {
   name: "Guilherme Fernandes",
-  tagline: "I create brands, products, systems and growth.",
+  portrait: "/assets/shared/portrait-2026-09-16.png",
+  tagline: "I turn ideas into practical growth, operations, and digital products.",
   description:
-    "Guilherme Fernandes — startup management, growth, operations, and AI-assisted automation. Explore company results, ventures, apps, and creative work.",
+    "Guilherme Fernandes works across growth, operations, and company building. Explore his work in ventures, digital products, and automation.",
   intro:
-    "Entrepreneur and builder focused on turning ideas into clear brands, useful products, sharper systems, and growth-ready foundations.",
+    "Founder and operator turning early ideas into useful products, partnerships, and practical systems.",
   baseUrl: "https://portfolio-gui-eosin.vercel.app",
   cvPdf: "/cv/Guilherme_Fernandes_Resume.pdf" as string | null,
   social: {
@@ -16,11 +17,11 @@ export const siteConfig = {
 };
 
 export const navigation = [
-  { href: "/cv", label: "Work" },
-  { href: "/projects", label: "Projects" },
-  { href: "/story", label: "My story" },
+  { href: "/projects", label: "My work" },
   { href: "/travel", label: "My travels" },
-  { href: "/contact", label: "Let’s talk" },
+  { href: "/story", label: "My story" },
+  { href: "/cv", label: "CV" },
+  { href: "/contact", label: "Contact me" },
 ];
 
 export const capabilities = [

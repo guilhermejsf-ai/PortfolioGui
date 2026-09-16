@@ -1,0 +1,63 @@
+.page {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 42px 48px 80px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  align-items: start;
+  column-gap: clamp(40px, 6vw, 90px);
+  row-gap: 44px;
+}
+.intro { padding-top: 24px; }
+.eyebrow { font-size: 14px; font-weight: 500; letter-spacing: .04em; }
+.intro > .eyebrow { color: var(--muted); margin-bottom: 30px; }
+.intro h1 {
+  font-size: clamp(42px, 4.4vw, 60px);
+  font-weight: 500;
+  letter-spacing: -.055em;
+  line-height: 1.09;
+}
+.intro h1 span { color: #245563; }
+.description { max-width: 360px; margin-top: 26px; font-size: 18px; line-height: 1.65; color: var(--muted); }
+.person { display: flex; align-items: center; gap: 14px; margin-top: 58px; }
+.portrait { width: 64px; height: 64px; object-fit: cover; border-radius: 50%; }
+.name { font-size: 16px; font-weight: 500; }
+.specialties { max-width: 240px; margin-top: 5px; font-size: 14px; line-height: 1.5; color: var(--muted); }
+.connections { min-width: 0; }
+.email { display: block; padding: 30px; border-radius: 26px; background: #245563; color: #fff; transition: background .2s ease; }
+.email:hover { background: #1b414c; }
+.emailTop { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.email h2 { margin-top: 28px; font-size: 42px; letter-spacing: -.045em; line-height: 1.15; font-weight: 500; }
+.email p { margin-top: 12px; color: #e7f1f4; font-size: 16px; line-height: 1.6; white-space: nowrap; }
+.address { display: block; margin-top: 36px; padding-top: 20px; border-top: 1px solid #ffffff45; font-size: clamp(16px, 1.55vw, 20px); line-height: 1.5; overflow-wrap: anywhere; text-decoration: underline; text-underline-offset: 5px; text-decoration-color: #ffffff70; }
+.links { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; border-top: 1px solid var(--line); }
+.link { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 20px 8px;  transition: color .2s ease, background .2s ease; }
+.link:hover { color: #245563; background: #f6f6f7; }
+.link h2 { font-size: 16px; font-weight: 500; }
+.link p { margin-top: 5px; color: var(--muted); font-size: 14px; line-height: 1.5; }
+.fileType { margin-left: 8px; padding: 3px 5px; border: 1px solid var(--line); border-radius: 4px; font-size: 12px; }
+.email:focus-visible, .link:focus-visible { outline: 3px solid #245563; outline-offset: 5px; }
+@media (max-width: 900px) {
+  .page { grid-template-columns: minmax(0, 1fr); max-width: 640px; padding: 16px 32px 56px; gap: 32px; }
+  .intro h1 { font-size: 42px; }
+  .email { padding: 24px; }
+}
+@media (max-width: 440px) {
+  .email p { white-space: normal; }
+}
+@media (max-width: 720px) {
+  .page { grid-template-columns: minmax(0, 1fr); max-width: 560px; padding: 8px 24px 40px; gap: 36px; }
+  .intro { padding-top: 0; }
+  .intro > .eyebrow { margin-bottom: 22px; }
+  .intro h1 { font-size: clamp(34px, 7.5vw, 48px); }
+  .description { margin-top: 20px; font-size: 16px; }
+  .person { margin-top: 26px; }
+  .links { grid-template-columns: 1fr; gap: 0; }
+  .link { border-bottom: 1px solid var(--line); }
+  .portrait { width: 52px; height: 52px; }
+  .email h2 { margin-top: 22px; font-size: 36px; }
+  .address { margin-top: 28px; font-size: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .email, .link { transition: none; }
+}

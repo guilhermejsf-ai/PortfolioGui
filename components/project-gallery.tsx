@@ -1,4 +1,5 @@
 "use client";
+import { Chevron } from "@/components/chevron";
 import Image from "next/image";
 import { useState } from "react";
 import type { ProjectVisual } from "@/data/projects";
@@ -36,17 +37,17 @@ export function ProjectGallery({
             aria-label="Previous image"
             onClick={() => setActive(active - 1)}
           >
-            ←
+            <Chevron direction="left" />
           </button>
           <button
             disabled={active === images.length - 1}
             aria-label="Next image"
             onClick={() => setActive(active + 1)}
           >
-            →
+            <Chevron />
           </button>
           <a href={images[active].src} target="_blank" rel="noreferrer">
-            Full image ↗
+            Full image
           </a>
         </div>
       </div>

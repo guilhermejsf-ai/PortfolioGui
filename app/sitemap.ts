@@ -8,6 +8,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/cv",
     "/contact",
     "/travel",
-    ...projects.map((p) => `/projects/${p.slug}`),
+    ...projects.map((p) => `/projects?project=${p.slug}`),
   ].map((path) => ({ url: `${siteConfig.baseUrl}${path}` }));
 }

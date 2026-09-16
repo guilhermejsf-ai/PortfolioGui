@@ -1,20 +1,10 @@
-"use client";
-
-import { FormEvent, useState } from "react";
+import Link from "next/link";
 
 type StoryGateProps = {
   children: React.ReactNode;
 };
 
 export function StoryGate({ children }: StoryGateProps) {
-  const [password, setPassword] = useState("");
-  const [showHint, setShowHint] = useState(false);
-
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setShowHint(true);
-  }
-
   return (
     <div className="relative">
       <div
@@ -30,37 +20,19 @@ export function StoryGate({ children }: StoryGateProps) {
             Private page
           </p>
           <h2 className="mt-3 font-display text-3xl tracking-tight text-ink">
-            Enter password
+            My story is private for now.
           </h2>
           <p className="mt-3 text-sm leading-7 text-muted">
-            contact me to know more
+            There’s more behind the work than I’ve put online. If you’d like to
+            know more about my path, get in touch.
           </p>
 
-          <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
-            <label className="block">
-              <span className="sr-only">Password</span>
-              <input
-                type="password"
-                value={password}
-                onChange={(event) => setPassword(event.target.value)}
-                placeholder="Password"
-                className="w-full rounded-2xl border border-line bg-surface/90 px-4 py-3 text-sm text-ink outline-none transition placeholder:text-muted focus:border-accent"
-              />
-            </label>
-
-            <button
-              type="submit"
-              className="w-full rounded-2xl bg-ink px-4 py-3 text-sm font-medium text-[#27201d] transition hover:opacity-90"
-            >
-              Enter
-            </button>
-          </form>
-
-          {showHint ? (
-            <p className="mt-4 text-sm leading-6 text-accent-deep">
-              This story stays private for now. Contact me to know more.
-            </p>
-          ) : null}
+          <Link
+            href="/contact"
+            className="mt-6 inline-flex rounded-2xl bg-ink px-4 py-3 text-sm font-medium text-white transition hover:opacity-90"
+          >
+            Get in touch
+          </Link>
         </div>
       </div>
     </div>

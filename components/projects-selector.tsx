@@ -1,28 +1,28 @@
 "use client";
+import { Chevron } from "@/components/chevron";
 import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
-import { usePathname } from "next/navigation";
+import { useCallback, useMemo, useState } from "react";
+import { usePathname, useSearchParams } from "next/navigation";
+import { ProjectWheel } from "./project-wheel";
+import { ProjectRelatedLink } from "./project-related-link";
 import {
   Project,
-  getProjectLogoVisual,
   getProjectPreviewSlides,
-  projectGroupOrder,
 } from "@/data/projects";
 import { siteConfig } from "@/data/site";
 import { ProjectEvidence, ProjectApproach } from "./project-evidence";
 
 const projectOrder = [
+  "blendbyte",
+  "grupo-invest",
   "nordensa",
   "racefiets013",
   "umedicu",
-  "blendbyte",
-  "grupo-invest",
+  "habits",
   "nexdoo",
   "zcharge",
   "mumzers",
   "safe-travel",
-  "habits",
   "pocket-tours",
   "footy",
   "finance",
@@ -32,26 +32,6 @@ const projectOrder = [
 function linkKey(href: string) {
   return href.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "");
 }
-function ProjectMark({ project }: { project: Project }) {
-  const logo = getProjectLogoVisual(project);
-  return (
-    <span className="project-mark">
-      {logo.type === "image" ? (
-        <Image
-          src={logo.src}
-          alt=""
-          fill
-          sizes="44px"
-          className={logo.fit === "cover" ? "object-cover" : "object-contain"}
-        />
-      ) : (
-        <span aria-hidden="true">
-          {project.iconBadge ?? project.title.slice(0, 2)}
-        </span>
-      )}
-    </span>
-  );
-}
 export function ProjectsSelector({
   projects,
   initialSlug,
@@ -60,20 +40,30 @@ export function ProjectsSelector({
   initialSlug?: string;
 }) {
   const pathname = usePathname();
-  const ordered = [...projects].sort((a, b) => {
+  const searchParams = useSearchParams();
+  const ordered = useMemo(() => [...projects].sort((a, b) => {
     const rank = (slug: string) =>
       projectOrder.includes(slug)
         ? projectOrder.indexOf(slug)
         : projectOrder.length;
     return rank(a.slug) - rank(b.slug);
-  });
-  const [selectedSlug, setSelectedSlug] = useState(
-    initialSlug ?? ordered[0]?.slug,
-  );
-  const [slideIndex, setSlideIndex] = useState(0);
+  }), [projects]);
+  const selectedSlug = searchParams.get("project") ?? initialSlug ?? ordered[0]?.slug;
+  const [preview, setPreview] = useState({ slug: selectedSlug, index: 0 });
+  const slideIndex = preview.slug === selectedSlug ? preview.index : 0;
+  const setSlideIndex = (index: number) => setPreview({ slug: selectedSlug, index });
+  const selectProject = useCallback((slug: string) => {
+    const url = new URL(window.location.href);
+    if (url.searchParams.get("project") === slug) return;
+    url.searchParams.set("project", slug);
+    window.history.pushState(null, "", `${url.pathname}${url.search}${url.hash}`);
+  }, []);
   const selected = ordered.find((p) => p.slug === selectedSlug) ?? ordered[0];
   if (!selected) return null;
-  const slides = getProjectPreviewSlides(selected);
+  const slides = [...getProjectPreviewSlides(selected), ...selected.gallery].filter(
+    (visual, index, all) => visual.type === "image" &&
+      all.findIndex(item => item.type === "image" && item.src === visual.src) === index,
+  );
   const safeIndex = slides[slideIndex] ? slideIndex : 0;
   const slide = slides[safeIndex];
   const actions = [
@@ -94,6 +84,7 @@ export function ProjectsSelector({
     ...(selected.actions?.instagram
       ? [{ label: "Instagram", href: selected.actions.instagram }]
       : []),
+    ...(selected.slug === "zcharge" ? [{ label: "Request deck", href: `mailto:${siteConfig.social.email}?subject=ZCharge%20deck%20request` }] : []),
     ...selected.links,
     ...(selected.detailCard.buttons ?? []),
   ].filter(
@@ -104,38 +95,7 @@ export function ProjectsSelector({
   );
   return (
     <div className="work-browser">
-      <nav className="project-directory" aria-label="Choose a project">
-        {projectGroupOrder.map((group) => {
-          const items = ordered.filter((p) => p.group === group);
-          if (!items.length) return null;
-          return (
-            <div className="project-group" key={group}>
-              <p className="eyebrow">{group}</p>
-              <div className="project-group-items">
-                {items.map((project) => (
-                  <Link
-                    key={project.slug}
-                    href={`/projects?project=${project.slug}`}
-                    prefetch={false}
-                    scroll={pathname !== "/projects"}
-                    className="project-choice"
-                    aria-current={
-                      project.slug === selected.slug ? "page" : undefined
-                    }
-                    onClick={() => {
-                      setSelectedSlug(project.slug);
-                      setSlideIndex(0);
-                    }}
-                  >
-                    <ProjectMark project={project} />
-                    <span>{project.title}</span>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          );
-        })}
-      </nav>
+      <ProjectWheel projects={ordered} selectedSlug={selected.slug} onSelect={selectProject} />
       <article
         className="project-stage"
         id="project-detail"
@@ -143,87 +103,56 @@ export function ProjectsSelector({
       >
         <header className="project-stage-heading">
           <div>
-            <p className="eyebrow">
-              {selected.detailCard.meta ?? selected.section}
-            </p>
             <h2>{selected.title}</h2>
             <p className="project-role">
               {selected.detailCard.role}
-              <span aria-hidden="true"> · </span>
-              <span>{selected.year}</span>
+              {selected.year && <><span aria-hidden="true"> · </span><span>{selected.year}</span></>}
             </p>
           </div>
-          <Link className="text-link" href={`/projects/${selected.slug}`}>
-            Full project details ↗
-          </Link>
+          <p className="eyebrow project-stage-category">
+            {selected.detailCard.meta ?? selected.section}
+          </p>
+          {actions.length > 0 && (
+            <nav className="project-header-links" aria-label={`${selected.title} related links`}>
+              {actions.map(link => (
+                <ProjectRelatedLink key={link.href} href={link.href} label={link.label} />
+              ))}
+            </nav>
+          )}
         </header>
         <p className="project-intro">{selected.summary}</p>
         <div className="project-stage-body">
           <div className="project-stage-media">
             {slide?.type === "image" ? (
-              <figure className="project-preview">
-                <div className="project-preview-image">
-                  <Image
-                    key={`${selected.slug}-${safeIndex}`}
-                    src={slide.src}
-                    alt={slide.alt}
-                    fill
-                    sizes="(max-width: 900px) 95vw, 720px"
-                    className="object-contain"
-                    priority={pathname === "/projects"}
-                  />
+              <figure className="work-photo-card">
+                <div className="work-photo-main">
+                  <Image key={`${selected.slug}-${safeIndex}`} src={slide.src} alt={slide.alt}
+                    fill sizes="(max-width: 800px) 90vw, 440px" className={slide.src === "/assets/projects/racefiets013/team.jpg" ? "object-cover object-[center_72%]" : "object-contain"}
+                    priority={pathname === "/projects"} />
                 </div>
-                <figcaption>
-                  <span>{slide.label}</span>
-                  <a href={slide.src} target="_blank" rel="noreferrer">
-                    Full image ↗
-                  </a>
-                </figcaption>
                 {slides.length > 1 && (
-                  <div className="project-slide-controls">
-                    <button
-                      aria-label={`Show previous ${selected.title} slide`}
-                      onClick={() =>
-                        setSlideIndex(
-                          (safeIndex - 1 + slides.length) % slides.length,
-                        )
-                      }
-                    >
-                      ←
-                    </button>
-                    <div className="project-slide-dots">
-                      {slides.map((s, i) => (
-                        <button
-                          key={`${s.label}-${i}`}
-                          aria-label={`Show ${selected.title} slide ${i + 1}`}
-                          aria-pressed={i === safeIndex}
-                          onClick={() => setSlideIndex(i)}
-                        >
-                          <span />
-                        </button>
-                      ))}
-                    </div>
-                    <span aria-live="polite">
-                      {safeIndex + 1} / {slides.length}
-                    </span>
-                    <button
-                      aria-label={`Show next ${selected.title} slide`}
-                      onClick={() =>
-                        setSlideIndex((safeIndex + 1) % slides.length)
-                      }
-                    >
-                      →
-                    </button>
-                  </div>
+                  <figcaption className="work-photo-toolbar">
+                    <button type="button" aria-label={`Show previous ${selected.title} image`} onClick={() => setSlideIndex((safeIndex - 1 + slides.length) % slides.length)}><Chevron direction="left" /></button>
+                    <span aria-live="polite">{safeIndex + 1} / {slides.length}</span>
+                    <button type="button" aria-label={`Show next ${selected.title} image`} onClick={() => setSlideIndex((safeIndex + 1) % slides.length)}><Chevron /></button>
+                  </figcaption>
                 )}
+                {slides.length > 1 && <div className="work-photo-thumbnails" aria-label={`${selected.title} images`}>
+                  {slides.map((image, index) => image.type === "image" && (
+                    <button key={image.src} type="button" aria-label={`Show ${selected.title} image ${index + 1}`}
+                      aria-pressed={index === safeIndex} onClick={() => setSlideIndex(index)}>
+                      <Image src={image.src} alt="" fill sizes="52px" className="object-cover" />
+                    </button>
+                  ))}
+                </div>}
               </figure>
             ) : selected.group === "Current work" ? (
               <section className="current-work-delivery">
                 <p className="eyebrow">In practice</p>
                 <h3>
                   {selected.slug === "blendbyte"
-                    ? "A company, with systems behind it."
-                    : "Improving how the business works."}
+                    ? "The work behind Blendbyte's new direction."
+                    : "Digital delivery and ongoing process improvement."}
                 </h3>
                 <ol>
                   {selected.workedOn.map((item, i) => (
@@ -243,52 +172,37 @@ export function ProjectsSelector({
                   className="text-link"
                   href={`mailto:${siteConfig.social.email}?subject=ZCharge%20deck%20request`}
                 >
-                  Email to request the deck ↗
+                  Email to request the deck
                 </a>
               </section>
-            ) : (
-              <div className="current-work-delivery">
-                <p>{slide?.label ?? selected.title}</p>
-              </div>
-            )}
-            {actions.length > 0 && (
-              <div
-                className="project-external-links"
-                aria-label="Project links"
-              >
-                {actions.map((link) => (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {link.label} ↗
-                  </a>
-                ))}
-              </div>
-            )}
+            ) : null}
+
           </div>
+          <div className="project-information">
           <ProjectEvidence project={selected} />
-        </div>
         <div className="project-contribution">
-          <ProjectApproach project={selected} />
-          <section>
-            <p className="eyebrow">
-              {selected.group === "Current work"
-                ? "My work so far"
-                : "What I did"}
-            </p>
-            <ul>
-              {selected.detailCard.whatIDid.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </section>
-          {selected.note && <p className="case-note">{selected.note}</p>}
-          <Link className="text-link" href={`/projects/${selected.slug}`}>
-            Explore the full project ↗
-          </Link>
+          {selected.group !== "Current work" && (
+            <section>
+              <p className="eyebrow">What I did</p>
+              <ul>
+                {selected.detailCard.whatIDid.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </section>
+          )}
+          {selected.group !== "Current work" && selected.note && <p className="case-note">{selected.note}</p>}
+          <details className="project-context-disclosure" key={selected.slug}>
+            <summary>Context &amp; contribution</summary>
+            <ProjectApproach project={selected} />
+            <p>{selected.whatItIs}</p>
+            <p>{selected.myRole}</p>
+            {selected.overview.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
+            <ul>{selected.workedOn.map(item => <li key={item}>{item}</li>)}</ul>
+            <p className="project-context-meta">{selected.category} · {selected.detailCard.status}</p>
+          </details>
+        </div>
+          </div>
         </div>
       </article>
     </div>

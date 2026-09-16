@@ -2,7 +2,7 @@ import { currentWork } from "./current-work";
 
 export type ProjectSection =
   | "Founded / Built"
-  | "Built for Companies"
+  | "Company Roles & Client Work"
   | "Strategy / Consulting"
   | "Product Experiments";
 
@@ -72,7 +72,7 @@ export type Project = {
   summary: string;
   role: string;
   iconBadge?: string;
-  year: string;
+  year?: string;
   tags: string[];
   featured: boolean;
   detailCard: ProjectDetailCard;
@@ -93,7 +93,7 @@ export type Project = {
 
 export const projectSections: ProjectSection[] = [
   "Founded / Built",
-  "Built for Companies",
+  "Company Roles & Client Work",
   "Strategy / Consulting",
   "Product Experiments",
 ];
@@ -115,10 +115,10 @@ export const projects: Project[] = [
     title: "Racefiets013",
     subtitle: "Website rebuild and rebrand work for a cycling business.",
     category: "Brand / Website",
-    section: "Built for Companies",
+    section: "Company Roles & Client Work",
     group: "Featured",
     summary:
-      "Helped rebuild and rebrand the digital presence of Racefiets013, improving the store, growth systems, and overall online performance.",
+      "I led growth and digital operations for Racefiets013, rebuilding its Shopify store, refreshing the brand, and improving the processes behind online sales. Instagram gained more than 40,000 followers in six months.",
     role: "Growth and Digital Operations Lead",
     iconBadge: "Growth Lead",
     year: "2025 - Present",
@@ -133,27 +133,28 @@ export const projects: Project[] = [
         "Built automation workflows to streamline processes from sourcing to sale",
         "Set up email capture and newsletter infrastructure",
         "Improved SEO and overall digital presence",
+        "Gained more than 40,000 Instagram followers in six months",
       ],
       outcome: {
         title: "Outcome",
         text:
-          "Contributed to growth from 12k to 25k sessions YoY and increased online sales from EUR2k to EUR9k. Built automations that saved 25 hours per week for the team, launched an email system from zero to 267 subscribers in 2 months, and supported a 25% increase in Google five-star reviews during my tenure.",
+          "Instagram gained more than 40,000 followers in six months. December sessions rose from 12k to 25k year over year, and online sales increased from €2k to €9k. I built automations that saved the team 25 hours a week and grew the email list from zero to 267 subscribers in two months.",
       },
       status: "2025 - Present",
-      meta: "Built for Companies",
+      meta: "Company Roles & Client Work",
       buttons: [
         { label: "Read more", href: "/projects/racefiets013" },
         { label: "Visit site", href: "https://racefiets013.com/" },
       ],
     },
     overview: [
-      "Racefiets013 is one of the clearest examples of hands-on company work in this portfolio.",
+      "Racefiets013 sells second-hand bicycles in the Netherlands.",
       "The project combined website rebuilding, rebranding, and wider support around how the business showed up digitally.",
     ],
     whatItIs:
-      "A company project where the work went beyond a single deliverable and into the broader presentation of the brand online.",
+      "A cycling business whose online store, brand, and operating processes needed to work together.",
     myRole:
-      "I worked there and helped rebuild the website, reshape the brand direction, and support improvements that affected the wider digital presence.",
+      "I led digital growth and operations, rebuilt the Shopify store, and improved the systems behind marketing and sales.",
     workedOn: [
       "Website rebuild",
       "Brand refresh and visual direction",
@@ -203,6 +204,14 @@ export const projects: Project[] = [
     previewSlides: [
       {
         type: "image",
+        label: "Racefiets013 team",
+        src: "/assets/projects/racefiets013/team.jpg",
+        alt: "Guilherme with the Racefiets013 team",
+        fit: "cover",
+        tone: "neutral",
+      },
+      {
+        type: "image",
         label: "Racefiets013 concept screen 1",
         src: "/assets/projects/racefiets013/slider-01.png",
         alt: "Racefiets013 concept screen",
@@ -227,6 +236,14 @@ export const projects: Project[] = [
       },
     ],
     gallery: [
+      {
+        type: "image",
+        label: "Racefiets013 team",
+        src: "/assets/projects/racefiets013/team.jpg",
+        alt: "Guilherme with the Racefiets013 team",
+        fit: "cover",
+        tone: "neutral",
+      },
       {
         type: "image",
         label: "Racefiets013 logo",
@@ -258,19 +275,19 @@ export const projects: Project[] = [
   {
     slug: "nordensa",
     title: "Nordensa",
-    subtitle: "Co-founded venture with live web and social presence.",
+    subtitle: "Co-founded football venture focused on fans and player opportunities.",
     category: "Venture / Brand / Product",
     section: "Founded / Built",
     group: "Featured",
     summary:
-      "Co-founded Nordensa and helped build the company's early operating model across partnerships, hiring, go-to-market execution, and internal systems.",
-    role: "Co-founder, Operations and Growth",
+      "Co-founded Nordensa and helped build the company's early operating model across partnerships, hiring, go-to-market execution, and internal systems. I remain a shareholder.",
+    role: "Co-founder, Operations and Growth · Current shareholder",
     iconBadge: "Co-Founded",
     year: "2022 - 2024",
     tags: ["Venture", "Brand", "Product"],
     featured: true,
     detailCard: {
-      role: "Co-founder, Operations and Growth",
+      role: "Co-founder, Operations and Growth · Current shareholder",
       whatIDid: [
         "Built early operations across partnerships, hiring, and go-to-market execution",
         "Created pitch materials and contributed to the financial model",
@@ -281,7 +298,7 @@ export const projects: Project[] = [
       outcome: {
         title: "Outcome",
         text:
-          "Helped support EUR1.6 million raised across two pre-seed rounds, closed 11 strategic partnerships, contributed to 5 player signings and more than 10 trials arranged, and supported team growth from 2 to 30+ people including 15 hires across multiple functions.",
+          "Supported the company as it raised €1.6 million across two pre-seed rounds, closed 11 strategic partnerships, contributed to 5 player signings and more than 10 trials arranged, and supported team growth from 2 to 30+ people including 15 hires across multiple functions.",
       },
       status: "2022 - 2024",
       meta: "Founded / Built",
@@ -291,13 +308,13 @@ export const projects: Project[] = [
       ],
     },
     overview: [
-      "Nordensa represents founder-led building across identity, direction, and public presence.",
-      "The project is already live across the website and Instagram, making it a strong real-world foundation for a fuller case study later.",
+      "I helped build Nordensa from its early stage across partnerships, hiring, and operations.",
+      "The work included investor materials, a Notion operating system, and monthly stakeholder reporting.",
     ],
     whatItIs:
-      "A co-founded venture where the brand, website, and product direction all matter as one connected system.",
+      "A football venture connecting fans with opportunities to support players.",
     myRole:
-      "I co-founded Nordensa and helped shape the company through brand thinking, product direction, and how it presents itself publicly.",
+      "I co-founded Nordensa and helped build its early operations across partnerships, hiring, investor reporting, and internal systems. I remain a shareholder.",
     workedOn: [
       "Founding and concept development",
       "Brand direction",
@@ -348,21 +365,29 @@ export const projects: Project[] = [
     },
     archiveVisual: {
       type: "image",
-      label: "Nordensa concept",
-      src: "/assets/projects/nordensa/concept.webp",
-      alt: "Nordensa concept visual",
+      label: "Make Football History",
+      src: "/assets/projects/nordensa/make-football-history-hero.png",
+      alt: "Nordensa Make Football History campaign artwork",
       fit: "cover",
       tone: "neutral",
     },
     cardVisual: {
       type: "image",
-      label: "Nordensa concept",
-      src: "/assets/projects/nordensa/concept.webp",
-      alt: "Nordensa concept visual",
+      label: "Make Football History",
+      src: "/assets/projects/nordensa/make-football-history-hero.png",
+      alt: "Nordensa Make Football History campaign artwork",
       fit: "cover",
       tone: "neutral",
     },
     previewSlides: [
+      {
+        type: "image",
+        label: "Make Football History",
+        src: "/assets/projects/nordensa/make-football-history-hero.png",
+        alt: "Nordensa Make Football History campaign artwork",
+        fit: "cover",
+        tone: "neutral",
+      },
       {
         type: "image",
         label: "Nordensa mobile screen 1",
@@ -399,19 +424,19 @@ export const projects: Project[] = [
     gallery: [
       {
         type: "image",
-        label: "Nordensa logo",
-        src: "/assets/projects/nordensa/icon-logo.png",
-        alt: "Nordensa logo",
-        fit: "contain",
-        tone: "white",
-      },
-      {
-        type: "image",
         label: "Nordensa concept",
         src: "/assets/projects/nordensa/concept.webp",
         alt: "Nordensa concept visual",
         fit: "cover",
         tone: "neutral",
+      },
+      {
+        type: "image",
+        label: "Nordensa logo",
+        src: "/assets/projects/nordensa/icon-logo.png",
+        alt: "Nordensa logo",
+        fit: "contain",
+        tone: "white",
       },
       {
         type: "placeholder",
@@ -423,9 +448,9 @@ export const projects: Project[] = [
   {
     slug: "umedicu",
     title: "Umedicu",
-    subtitle: "Built the company foundations from the original idea.",
+    subtitle: "Brand, funding applications, product coordination, and launch.",
     category: "Company build / Product / Brand",
-    section: "Built for Companies",
+    section: "Company Roles & Client Work",
     group: "Featured",
     summary:
       "Led brand, go-to-market planning, and launch execution for Umedicu, a healthcare app focused on improving access to care and centralizing patient health information.",
@@ -446,10 +471,10 @@ export const projects: Project[] = [
       outcome: {
         title: "Outcome",
         text:
-          "Secured 3 EU grant applications totaling EUR350k and helped drive early traction with more than 100 downloads in the first week.",
+          "Prepared and secured three EU grant applications totalling €350k, and helped the app reach more than 100 downloads in its first week.",
       },
       status: "2024 - 2025",
-      meta: "Built for Companies",
+      meta: "Company Roles & Client Work",
       buttons: [
         { label: "Read more", href: "/projects/umedicu" },
         { label: "Visit site", href: "/projects/umedicu", disabled: true },
@@ -457,10 +482,10 @@ export const projects: Project[] = [
     },
     overview: [
       "Umedicu started from an idea and needed structure, presentation, and execution across multiple touchpoints.",
-      "The work belongs in this portfolio as a company-building assignment rather than a narrow one-off design task.",
+      "I coordinated an outsourced product team while working on brand, funding applications, and launch.",
     ],
     whatItIs:
-      "A company build where the core challenge was turning an initial idea into something more concrete across brand and product presence.",
+      "A healthcare app developed from an initial idea into a launched product.",
     myRole:
       "I was hired to help build the company around their idea, contributing across the foundations that support the website, app, and broader presentation.",
     workedOn: [
@@ -574,14 +599,13 @@ export const projects: Project[] = [
   {
     slug: "nexdoo",
     title: "Nexdoo",
-    subtitle: "Co-founded product with live social presence and prepared web direction.",
+    subtitle: "Co-founded app for discovering and hosting social gatherings.",
     category: "Venture / App / Brand",
     section: "Founded / Built",
     group: "Co-Founded Ventures",
     summary:
-      "Co-built Nexdoo, a live social app designed to help people discover and host house parties and gatherings based on shared interests, vibe, and group compatibility.",
+      "I co-founded Nexdoo, an app for discovering and hosting social gatherings. I worked on the business plan, financial model, brand, and marketing strategy.",
     role: "Co-founder",
-    year: "Year to add",
     tags: ["Venture", "App", "Brand"],
     featured: true,
     detailCard: {
@@ -603,8 +627,8 @@ export const projects: Project[] = [
       buttons: [{ label: "Read more", href: "/projects/nexdoo" }],
     },
     overview: [
-      "Nexdoo is a founder-led build where concept, app direction, and brand communication all move together.",
-      "The current website is represented honestly through prepared screenshots instead of a fake live page.",
+      "Nexdoo was built around hosting and discovering social gatherings.",
+      "The website design is documented in screenshots; the project panel links to its Instagram presence.",
     ],
     whatItIs:
       "A co-founded company built around a live app and public brand presence, with the website direction already designed and documented.",
@@ -731,12 +755,11 @@ export const projects: Project[] = [
     title: "Safe Travel",
     subtitle: "New website and rebranding work for a client business.",
     category: "Rebrand / Website",
-    section: "Built for Companies",
+    section: "Company Roles & Client Work",
     group: "Consultancy",
     summary:
-      "Led the rebrand and website build for Safe Travel, turning the business into a clearer and more modern digital presence.",
+      "I redesigned Safe Travel's brand and built its new website, reorganising the content so visitors can understand the service and find the next step more easily.",
     role: "Brand and Website Consultant",
-    year: "Year to add",
     tags: ["Client work", "Rebrand", "Website"],
     featured: true,
     detailCard: {
@@ -751,10 +774,10 @@ export const projects: Project[] = [
       outcome: {
         title: "Outcome",
         text:
-          "Delivered a live website and a refreshed brand presence that presented the business more clearly and professionally online.",
+          "Delivered a live website with a refreshed identity and clearer service information.",
       },
       status: "Live",
-      meta: "Built for Companies",
+      meta: "Company Roles & Client Work",
       buttons: [
         { label: "Read more", href: "/projects/safe-travel" },
         {
@@ -764,8 +787,8 @@ export const projects: Project[] = [
       ],
     },
     overview: [
-      "Safe Travel sits firmly in the client work side of the portfolio: clear scope, real launch, and visible brand impact.",
-      "The work combined a refreshed identity with a modernized site presence.",
+      "Safe Travel hired me to refresh its brand and build a new website.",
+      "I reorganised the content and designed the site around the updated identity.",
     ],
     whatItIs:
       "A client website and rebrand project designed to sharpen how the company communicates online.",
@@ -871,14 +894,13 @@ export const projects: Project[] = [
   {
     slug: "habits",
     title: "ha.bits",
-    subtitle: "Small app project built and shipped by Guilherme.",
+    subtitle: "Live habit-tracking app.",
     category: "Product Experiment / App",
     section: "Product Experiments",
     group: "Personal Products",
     summary:
-      "Built and launched ha.bits, a live habit tracking app designed around a clean interface and a simple daily experience.",
+      "I designed and built ha.bits, a live app that helps people track habits through a simple daily view.",
     role: "Personal Project",
-    year: "Year to add",
     tags: ["App", "Experiment", "Personal project"],
     featured: true,
     detailCard: {
@@ -888,12 +910,12 @@ export const projects: Project[] = [
         "Structured the product logic and user flow",
         "Developed the interface and overall experience",
         "Turned the concept into a live usable product",
-        "Shaped it as a polished personal software project",
+        "Designed the daily habit-tracking experience",
       ],
       outcome: {
         title: "Outcome",
         text:
-          "Launched the app as a live product, showing full execution from concept to working digital tool.",
+          "Launched a working habit-tracking app that people can use online.",
       },
       status: "Live",
       meta: "Product Experiment",
@@ -903,8 +925,8 @@ export const projects: Project[] = [
       ],
     },
     overview: [
-      "ha.bits shows a lighter, product-experiment side of the portfolio.",
-      "It is smaller in scope than the flagship client and venture work, but useful for showing shipped execution.",
+      "ha.bits brings daily habit tracking into a simple web app.",
+      "I worked on the product concept, interface, and implementation.",
     ],
     whatItIs:
       "A smaller app project built as a direct product experiment, with a live experience already available.",
@@ -927,50 +949,42 @@ export const projects: Project[] = [
     },
     logoVisual: {
       type: "image",
-      label: "ha.bits icon logo",
-      src: "/assets/projects/habits/icon-logo.png",
-      alt: "ha.bits icon logo",
+      label: "ha.bits logo",
+      src: "/assets/projects/habits/h-mark.svg",
+      alt: "ha.bits logo",
       fit: "contain",
       tone: "white",
     },
     cardVisual: {
       type: "image",
-      label: "ha.bits concept",
-      src: "/assets/projects/habits/concept.png",
-      alt: "ha.bits concept visual",
+      label: "ha.bits today screen",
+      src: "/assets/projects/habits/today-current.png",
+      alt: "ha.bits mobile app showing daily habits and progress",
       fit: "cover",
       tone: "white",
     },
     archiveVisual: {
       type: "image",
-      label: "ha.bits concept",
-      src: "/assets/projects/habits/concept.png",
-      alt: "ha.bits concept visual",
+      label: "ha.bits today screen",
+      src: "/assets/projects/habits/today-current.png",
+      alt: "ha.bits mobile app showing daily habits and progress",
       fit: "cover",
       tone: "white",
     },
     gallery: [
       {
         type: "image",
-        label: "ha.bits icon",
-        src: "/assets/projects/habits/icon-logo.png",
-        alt: "ha.bits icon",
-        fit: "contain",
-        tone: "blue",
-      },
-      {
-        type: "image",
-        label: "ha.bits logo",
-        src: "/assets/projects/habits/logo.png",
-        alt: "ha.bits logo",
-        fit: "contain",
+        label: "ha.bits habit board",
+        src: "/assets/projects/habits/board-current.png",
+        alt: "ha.bits habit calendar with daily check-ins",
+        fit: "cover",
         tone: "white",
       },
       {
         type: "image",
-        label: "ha.bits concept",
-        src: "/assets/projects/habits/concept.png",
-        alt: "ha.bits concept visual",
+        label: "ha.bits statistics",
+        src: "/assets/projects/habits/stats-current.png",
+        alt: "ha.bits statistics showing activity and streaks",
         fit: "cover",
         tone: "white",
       },
@@ -979,14 +993,13 @@ export const projects: Project[] = [
   {
     slug: "mumzers",
     title: "Mumzers",
-    subtitle: "Strategy case study created on a hired basis.",
+    subtitle: "Commissioned growth strategy project.",
     category: "Strategy / Consulting",
     section: "Strategy / Consulting",
     group: "Consultancy",
     summary:
-      "Delivered strategic consultancy for Mumzers focused on scaling wholesale outreach without damaging brand perception and improving consistency in direct-to-consumer sales.",
+      "Mumzers asked me to develop a strategy for growing wholesale outreach while protecting its premium positioning, and for making direct-to-consumer sales more consistent.",
     role: "Strategy and Growth Consultant",
-    year: "Year to add",
     tags: ["Strategy", "Consulting", "Case study"],
     featured: false,
     detailCard: {
@@ -1008,11 +1021,11 @@ export const projects: Project[] = [
       buttons: [{ label: "Read more", href: "/projects/mumzers" }],
     },
     overview: [
-      "Mumzers sits on the strategy side of the portfolio rather than the shipping-a-product side.",
-      "It deserves a structured case study later, but version 1 keeps the presentation honest and expandable.",
+      "Mumzers asked for an approach to two challenges: wholesale growth and more consistent direct-to-consumer sales.",
+      "I proposed retailer scoring, personalised follow-up, funnel analysis, and a 30 to 60 day testing plan.",
     ],
     whatItIs:
-      "A hired strategic study case focused on thinking, framing, and proposal work.",
+      "A commissioned strategy project covering wholesale outreach and direct-to-consumer growth.",
     myRole:
       "I was hired to develop the strategic case work and shape how the opportunity was framed.",
     workedOn: [
@@ -1057,14 +1070,13 @@ export const projects: Project[] = [
   {
     slug: "pocket-tours",
     title: "Pocket Tours",
-    subtitle: "Founded project that did not move forward due to investment limits.",
+    subtitle: "Self-guided audio tour concept developed before launch.",
     category: "Venture / Concept",
     section: "Founded / Built",
     group: "Personal Products",
     summary:
       "Built the concept for Pocket Tours, a travel app designed to let people discover places through flexible self-guided audio tours created by locals and independent storytellers.",
     role: "Founder",
-    year: "Year to add",
     tags: ["Venture", "Concept", "Founder"],
     featured: false,
     detailCard: {
@@ -1100,7 +1112,7 @@ export const projects: Project[] = [
       "Early venture framing",
     ],
     links: [],
-    note: "Project did not lift off due to lack of investment.",
+    note: "The project stopped before launch because it could not secure the funding it needed.",
     logoVisual: {
       type: "image",
       label: "Pocket Tours logo",
@@ -1178,9 +1190,8 @@ export const projects: Project[] = [
     section: "Founded / Built",
     group: "Co-Founded Ventures",
     summary:
-      "Co-built the concept for ZCharge, an EV charging solution focused on dynamic load balancing and a smarter system architecture for more reliable charging infrastructure.",
+      "I co-developed ZCharge, a concept for EV charging infrastructure with dynamic load balancing. I worked on the product vision, business model, roadmap, and investor pitch.",
     role: "Co-founder",
-    year: "Year to add",
     tags: ["Venture", "System", "Product"],
     featured: false,
     detailCard: {
@@ -1195,7 +1206,7 @@ export const projects: Project[] = [
       outcome: {
         title: "Outcome",
         text:
-          "Developed a full concept around two core problems in EV charging: infrastructure load constraints and overburdened smart chargers. The project was shaped into an investor-facing startup with a clear technical positioning, modular product logic, and commercial roadmap.",
+          "Developed an investor-ready concept addressing infrastructure load constraints and overloaded smart chargers, with a product roadmap, business model, and technical direction.",
       },
       status: "Concept",
       meta: "Founded / Built",
@@ -1203,12 +1214,12 @@ export const projects: Project[] = [
     },
     overview: [
       "ZCharge was built around a stronger technical point of view: dynamic load balancing, clearer system ownership, and simpler infrastructure logic.",
-      "It did not progress because investment was missing, but it remains one of the clearest examples of systems-first entrepreneurial thinking in the archive.",
+      "The concept did not progress to launch because it could not secure the funding it needed.",
     ],
     whatItIs:
       "An EV charging concept focused on smarter software-led control, dynamic load balancing, and cleaner responsibility between components.",
     myRole:
-      "I founded ZCharge and helped shape the concept, the system logic, the product framing, and the overall venture direction.",
+      "I co-founded ZCharge and worked on its product vision, system logic, business model, and investor narrative.",
     workedOn: [
       "Founder-led concept development",
       "System and product framing",
@@ -1216,7 +1227,7 @@ export const projects: Project[] = [
       "Positioning around infrastructure and software",
     ],
     links: [],
-    note: "Project did not lift off due to lack of investment.",
+    note: "The project stopped before launch because it could not secure the funding it needed.",
     logoVisual: {
       type: "image",
       label: "ZCharge logo",
@@ -1257,14 +1268,13 @@ export const projects: Project[] = [
   {
     slug: "finance",
     title: "fi.nance",
-    subtitle: "Smaller app project kept in the portfolio as a lighter experiment.",
+    subtitle: "Personal finance app for spending and planning.",
     category: "Product Experiment / App",
     section: "Product Experiments",
     group: "Personal Products",
     summary:
-      "Built fi.nance, a personal finance app designed to simplify tracking, planning, and understanding money through a clean digital experience.",
+      "I built fi.nance to make personal spending and planning easier to understand in one place.",
     role: "Personal Project",
-    year: "Year to add",
     tags: ["App", "Experiment", "Personal project"],
     featured: false,
     detailCard: {
@@ -1274,23 +1284,23 @@ export const projects: Project[] = [
         "Structured the product logic and user flow",
         "Developed the interface and overall experience",
         "Turned the concept into a live usable product",
-        "Shaped it as a polished personal software project",
+        "Designed the spending and planning experience",
       ],
       outcome: {
         title: "Outcome",
         text:
-          "Built the product as a working app, showing full execution from concept to live digital tool.",
+          "Built a personal finance app for tracking spending and planning ahead.",
       },
       status: "Live",
       meta: "Product Experiment",
       buttons: [{ label: "Read more", href: "/projects/finance" }],
     },
     overview: [
-      "fi.nance sits in the quieter part of the portfolio: useful to show range, but not over-positioned.",
-      "It helps round out the product experiment side without pretending to be a flagship case study.",
+      "fi.nance is a personal finance app focused on everyday tracking and planning.",
+      "I designed its core flows and interface as a personal product project.",
     ],
     whatItIs:
-      "A smaller personal app build that belongs in the work archive even if it is not one of the main portfolio pillars.",
+      "A personal finance app focused on everyday spending and planning.",
     myRole:
       "I built fi.nance as a smaller-scale product experiment.",
     workedOn: [
@@ -1364,14 +1374,13 @@ export const projects: Project[] = [
   {
     slug: "footy",
     title: "Footy",
-    subtitle: "Football app experiment built as part of the product side of the portfolio.",
+    subtitle: "Football app for organising games and players.",
     category: "Product Experiment / App",
     section: "Product Experiments",
     group: "Personal Products",
     summary:
-      "Built Footy, a football game management app designed to organize players, matches, and participation in a simple and practical way.",
+      "I built Footy to help organise casual football games, players, and participation.",
     role: "Personal Project",
-    year: "Year to add",
     tags: ["App", "Experiment", "Personal project"],
     featured: false,
     detailCard: {
@@ -1381,23 +1390,23 @@ export const projects: Project[] = [
         "Structured the product logic and user flow",
         "Developed the interface and overall experience",
         "Turned the concept into a working digital product",
-        "Shaped it as a polished personal software project",
+        "Designed the game and player management experience",
       ],
       outcome: {
         title: "Outcome",
         text:
-          "Built the product as a working app, showing full execution from idea to usable software.",
+          "Built an app for organising games, players, and participation.",
       },
       status: "Live",
       meta: "Product Experiment",
       buttons: [{ label: "Read more", href: "/projects/footy" }],
     },
     overview: [
-      "Footy expands the app-building side of the portfolio with another direct product experiment.",
-      "It belongs in the archive as part of the same self-directed building track as ha.bits and fi.nance.",
+      "Footy brings players, games, and participation into one app.",
+      "I shaped the product flow, interface, and features as a personal project.",
     ],
     whatItIs:
-      "A football app concept built as a smaller product experiment within the broader portfolio of apps and digital projects.",
+      "An app for organising casual football games and players.",
     myRole:
       "I built Footy as a personal app experiment, shaping the product direction and visual presentation directly.",
     workedOn: [
@@ -1487,13 +1496,12 @@ export const projects: Project[] = [
   {
     slug: "loves-conception",
     title: "Love's Conception",
-    subtitle: "Book project published and sold on Amazon.",
+    subtitle: "Book written and published by Guilherme Fernandes.",
     category: "Book / Creative Project",
     section: "Product Experiments",
     group: "Book",
-    summary: "Wrote and published a book, extending the portfolio into authored work.",
+    summary: "I wrote and published Love's Conception, taking it from manuscript to a public release on Amazon.",
     role: "Author",
-    year: "Year to add",
     tags: ["Book", "Creative", "Published work"],
     featured: false,
     detailCard: {
@@ -1503,12 +1511,12 @@ export const projects: Project[] = [
         "Wrote the manuscript",
         "Developed the creative direction",
         "Prepared the publication",
-        "Shipped the public release",
+        "Published the book",
       ],
       outcome: {
         title: "Outcome",
         text:
-          "The project became a real published release, adding a different kind of finished work to the portfolio beyond digital products.",
+          "Published Love's Conception and made it available on Amazon.",
         proofPoints: ["Published", "Available on Amazon"],
       },
       status: "Published",
@@ -1521,13 +1529,13 @@ export const projects: Project[] = [
       ],
     },
     overview: [
-      "Love's Conception adds a different texture to the portfolio: not a company or app, but still a built and shipped piece of work.",
-      "It sits naturally in the projects archive without becoming disproportionately featured.",
+      "I wrote Love's Conception and prepared it for publication.",
+      "The book was published and made available on Amazon.",
     ],
     whatItIs:
-      "A published book project that extends the portfolio beyond digital products into authored work.",
+      "A book I wrote and published on Amazon.",
     myRole:
-      "I wrote and published the book, turning it into a real public release rather than a private draft.",
+      "I wrote the manuscript and managed its publication.",
     workedOn: [
       "Writing and authorship",
       "Creative project development",
@@ -1592,15 +1600,15 @@ export const projects: Project[] = [
   {
     slug: "vlogui",
     title: "Vlogui",
-    subtitle: "Vlog concept added as a new category on the projects page.",
+    subtitle: "Personal video and travel project on Instagram Reels.",
     category: "VLOG",
     section: "Product Experiments",
     group: "VLOG",
     summary:
-      "A vlog-focused concept added to the portfolio as its own category entry.",
+      "Vlogui is my personal travel video project about places, people, and what I notice along the way. Watch the videos on my Instagram Reels.",
     role: "Creator",
     year: "2026",
-    tags: ["VLOG", "Content", "Concept"],
+    tags: ["VLOG", "Content", "Travel"],
     featured: false,
     detailCard: {
       type: "Vlog",
@@ -1608,31 +1616,31 @@ export const projects: Project[] = [
       whatIDid: [
         "Created the concept direction",
         "Defined the visual identity",
-        "Added it as a standalone portfolio entry",
+        "Explored the travel video format",
       ],
       outcome: {
         title: "Snapshot",
         text:
-          "Vlogui is currently presented as a dedicated vlog concept within the projects archive.",
+          "I developed the concept and visual identity, and the videos can be watched on my Instagram Reels.",
       },
-      status: "Concept",
+      status: "On Instagram",
       meta: "VLOG",
-      buttons: [{ label: "Read more", href: "/projects/vlogui" }],
+      buttons: [{ label: "Watch reels", href: "https://www.instagram.com/guilhermejsf/reels/" }],
     },
     overview: [
-      "Vlogui introduces a new vlog category to the projects page.",
-      "It sits as a compact concept entry with its own icon in the selector row.",
+      "Vlogui is a personal video project linked to my travels.",
+      "The videos are available on my Instagram Reels.",
     ],
     whatItIs:
-      "A vlog concept represented as a dedicated portfolio project entry.",
+      "A personal video project about travel and observation.",
     myRole:
-      "I created the concept and positioned it as a new category within the projects archive.",
+      "I developed the Vlogui concept and its visual direction.",
     workedOn: [
       "Concept direction",
-      "Category definition",
-      "Visual identity placement",
+      "Video format",
+      "Visual identity",
     ],
-    links: [{ label: "Read more", href: "/projects/vlogui" }],
+    links: [{ label: "Watch reels", href: "https://www.instagram.com/guilhermejsf/reels/" }],
     logoVisual: {
       type: "image",
       label: "Vlogui icon",

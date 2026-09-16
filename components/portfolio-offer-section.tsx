@@ -3,12 +3,9 @@ export function PortfolioOfferSection() {
   return (
     <section className="offer-section">
       <div>
-        <p>
-          Want a personalised portfolio like this?{" "}
-          <strong>LET’S BUILD YOURS!</strong>
-        </p>
+        <p>Need a clear, personal portfolio? <strong>I build selected projects.</strong></p>
         <a className="text-link" href={`mailto:${siteConfig.social.email}`}>
-          Email ↗
+          Ask about a portfolio
         </a>
       </div>
     </section>

@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 
-import { PortfolioOfferSection } from "@/components/portfolio-offer-section";
-import { ReachOutSection } from "@/components/reach-out-section";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { siteConfig } from "@/data/site";
@@ -23,9 +21,9 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   icons: {
-    icon: "/assets/shared/me.jpeg",
-    shortcut: "/assets/shared/me.jpeg",
-    apple: "/assets/shared/me.jpeg",
+    icon: siteConfig.portrait,
+    shortcut: siteConfig.portrait,
+    apple: siteConfig.portrait,
   },
 };
 
@@ -42,8 +40,6 @@ export default function RootLayout({
         </a>
         <SiteHeader />
         <main id="main-content">{children}</main>
-        <PortfolioOfferSection />
-        <ReachOutSection />
         <SiteFooter />
       </body>
     </html>

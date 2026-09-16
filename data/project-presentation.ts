@@ -9,7 +9,8 @@ export const projectHighlights: Record<
     { value: "2 → 30+", label: "Team growth I supported" },
   ],
   racefiets013: [
-    { value: "12k → 25k", label: "Sessions, year over year" },
+    { value: "12k → 25k", label: "December sessions, year over year" },
+    { value: "40k+", label: "Instagram followers gained in 6 months" },
     { value: "25 hours", label: "Saved per week through automation" },
     { value: "267", label: "Email subscribers from zero in 2 months" },
   ],

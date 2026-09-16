@@ -907,6 +907,8 @@ export function TravelSelector({ groups }: TravelSelectorProps) {
     ) ?? orderedEntries[0];
 
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+  const [showMoreDestinations, setShowMoreDestinations] = useState(false);
+  const moreGroup = orderedGroups.find((group) => group.slug === "more");
 
   const imageSlides =
     selectedEntry?.previewSlides.filter((slide) => slide.imageSrc) ?? [];
@@ -939,6 +941,7 @@ export function TravelSelector({ groups }: TravelSelectorProps) {
         <button
           type="button"
           onClick={() => {
+            setShowMoreDestinations(false);
             startTransition(() => {
               setSelectedSlug(entry.slug);
               const nextEntry = orderedEntries.find(
@@ -953,7 +956,7 @@ export function TravelSelector({ groups }: TravelSelectorProps) {
             });
           }}
           className={cn(
-            "flex w-20 flex-col items-center justify-center gap-2 rounded-[12px] p-1.5 transition duration-300 sm:p-2",
+            "flex h-[96px] w-20 flex-col items-center justify-start gap-2 rounded-[12px] p-1.5 transition duration-300 sm:p-2",
             isActive
               ? "bg-white shadow-[0_10px_24px_rgba(15,23,42,0.08)]"
               : "hover:-translate-y-0.5",
@@ -964,7 +967,7 @@ export function TravelSelector({ groups }: TravelSelectorProps) {
         >
           <div
             className={cn(
-              "relative flex h-[40px] w-[40px] items-center justify-center overflow-hidden rounded-[14px] border text-[1.35rem] transition sm:h-[44px] sm:w-[44px] sm:text-[1.5rem]",
+              "relative flex h-[40px] w-[40px] shrink-0 items-center justify-center overflow-hidden rounded-[14px] border text-[1.35rem] transition sm:h-[44px] sm:w-[44px] sm:text-[1.5rem]",
               theme.iconTone,
               isActive
                 ? cn("scale-[1.03]", theme.iconActive)
@@ -973,7 +976,7 @@ export function TravelSelector({ groups }: TravelSelectorProps) {
           >
             <span className="leading-none">{entry.flag}</span>
           </div>
-          <span className="text-[10px] leading-4 text-muted">
+          <span className="flex min-h-8 items-start justify-center text-center text-[10px] leading-4 text-muted">
             {entry.hoverLabel}
           </span>
         </button>
@@ -1023,6 +1026,28 @@ export function TravelSelector({ groups }: TravelSelectorProps) {
                       .map(renderSelectorItem)}
                   </div>
                 </div>
+              ) : group.slug === "more" ? (
+                <div className="mt-2.5 flex items-start gap-1.5 lg:gap-2">
+                  {group.items.slice(0, 4).map(renderSelectorItem)}
+                  {group.items.length > 4 && (
+                    <button
+                      type="button"
+                      onClick={() => setShowMoreDestinations((open) => !open)}
+                      className={cn(
+                        "flex h-[96px] w-14 shrink-0 flex-col items-center justify-start gap-2 rounded-[12px] p-1.5 transition hover:-translate-y-0.5 sm:p-2",
+                        showMoreDestinations && "bg-white shadow-[0_10px_24px_rgba(15,23,42,0.08)]",
+                      )}
+                      aria-label={showMoreDestinations ? "Hide more destinations" : "Show more destinations"}
+                      aria-expanded={showMoreDestinations}
+                      aria-controls="more-travel-destinations"
+                    >
+                      <span className="flex h-[40px] w-[40px] shrink-0 items-center justify-center rounded-[14px] border border-line/65 bg-white text-xl font-semibold leading-none text-ink sm:h-[44px] sm:w-[44px]">
+                        …
+                      </span>
+                      <span className="text-[10px] leading-4 text-muted">More</span>
+                    </button>
+                  )}
+                </div>
               ) : (
                 <div className="mt-2.5 flex items-center gap-2 sm:gap-2.5 md:gap-1.5 lg:gap-2 md:flex-wrap">
                   {group.items.map(renderSelectorItem)}
@@ -1032,6 +1057,15 @@ export function TravelSelector({ groups }: TravelSelectorProps) {
           ))}
         </div>
       </div>
+
+      {moreGroup && moreGroup.items.length > 4 && showMoreDestinations && (
+        <div
+          id="more-travel-destinations"
+          className="flex max-w-full flex-wrap gap-1.5 rounded-[18px] border border-line/65 bg-white p-2 shadow-card sm:gap-2"
+        >
+          {moreGroup.items.slice(4).map(renderSelectorItem)}
+        </div>
+      )}
 
       <section
         className={cn(
