@@ -48,9 +48,9 @@ export function WorkIndex() {
     });
   const projectColumns = [
     ["pocket-tours", "mumzers", "zcharge"],
-    ["safe-travel", "finance", "loves-conception"],
+    ["safe-travel", "finance"],
     ["umedicu", "nexdoo", "vlogui"],
-    ["habits", "footy"],
+    ["habits", "footy", "loves-conception"],
   ];
   const featuredSlugs = new Set(projectColumns.flat());
   const archiveProjects = remaining.filter(p => !featuredSlugs.has(p.slug));
