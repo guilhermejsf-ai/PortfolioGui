@@ -1564,11 +1564,21 @@ a.studio-tile:hover { box-shadow: 0 12px 28px -15px #0003; transform: translateY
 .now-entry h2 { display: flex; align-items: start; justify-content: space-between; gap: 16px; font-size: 18px; letter-spacing: -.025em; font-weight: 500; }
 .now-entry h2 span { color: var(--muted); }
 .now-entry p, .personal-tile > p:not(.tile-kicker) { color: var(--muted); font-size: 16px; line-height: 1.6; margin-top: 10px; }
+.feature-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 12px; margin-top: 12px; }
+.feature-column, .feature-project-stack { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.feature-projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 12px; }
+.feature-projects > div { min-width: 0; }
+.feature-projects .project-tile { width: 100%; }
 .results-tile dl { margin-top: 16px; }
 .results-tile dl > div { display: grid; grid-template-columns: 140px 1fr; align-items: center; gap: 18px; padding: 13px 0; }
 .results-tile dl > div + div { border-top: 1px solid var(--line); }
 .results-tile dt { font-size: 30px; line-height: 1.15; letter-spacing: -.055em; }
 .results-tile dd { font-size: 14px; color: var(--muted); line-height: 1.45; max-width: 245px; }
+.podcast-tile { display: flex; flex-direction: column; gap: 14px; padding: 18px; }
+.feature-columns .podcast-tile { min-height: 0; }
+.podcast-heading { display: flex; align-items: baseline; gap: 10px; }
+.podcast-heading h2 { font-size: 18px; font-weight: 500; letter-spacing: -.03em; }
+.podcast-tile iframe { display: block; min-width: 0; border: 0; border-radius: 12px; }
 .tile-loves-conception .tile-art { min-height: 260px; }
 .travel-tile { min-height: 260px; }
 .travel-image { object-fit: cover; }
@@ -1620,7 +1630,6 @@ a.studio-tile:hover { box-shadow: 0 12px 28px -15px #0003; transform: translateY
   .intro-tile .intro-specialties { margin-bottom: 4px; }
   .portrait-tile { min-height: 300px; }
   .now-tile, .results-tile, .personal-tile { padding: 22px; }
-  .results-tile dl > div { grid-template-columns: 120px 1fr; gap: 12px; }
   .results-tile dt { font-size: 27px; }
   .tile-art { min-height: 260px; }
   .reach-inner h2 { font-size: 25px; }
@@ -1702,13 +1711,22 @@ a.studio-tile:hover { box-shadow: 0 12px 28px -15px #0003; transform: translateY
   .studio-grid > .tile-racefiets013 { grid-column: 1; grid-row: 3; }
   .studio-grid > .portrait-tile { grid-column: 2; grid-row: 3; }
   .studio-grid > .travel-tile { grid-column: span 2; grid-row: 4; }
-  .studio-grid > .now-tile { grid-column: span 2; }
   .project-masonry { columns: 2; }
 }
 @media (max-width: 640px) {
   .compact-nav { flex-wrap: nowrap; gap: 2px; }
   .compact-nav a { flex: 1 0 auto; padding-inline: 5px; font-size: 13px; white-space: nowrap; }
   .studio-grid > .studio-tile { grid-column: 1; grid-row: auto; }
+  .feature-columns { display: flex; flex-direction: column; gap: 14px; margin-top: 14px; }
+  .feature-column { display: contents; }
+  .feature-columns .now-tile { order: 1; }
+  .feature-columns .podcast-tile { order: 2; }
+  .feature-columns .results-tile { order: 3; }
+  .feature-column:first-child .feature-projects { order: 4; }
+  .feature-column:last-child .feature-projects { order: 5; }
+  .feature-projects { grid-template-columns: 1fr; gap: 14px; }
+  .feature-project-stack { gap: 14px; }
+  .results-tile dl > div { display: grid; grid-template-columns: 120px 1fr; align-items: center; gap: 12px; padding: 13px 0; }
   .project-masonry { columns: 1; margin-top: 14px; }
   .project-masonry .project-tile { margin-bottom: 14px; border-radius: 24px; }
 }
