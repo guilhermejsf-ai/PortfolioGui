@@ -1520,7 +1520,6 @@ export const projects: Project[] = [
       },
       status: "Live",
       meta: "App / Team Operations",
-      buttons: [{ label: "Open app", href: "https://lv-schedule-viewer.vercel.app/" }],
     },
     overview: [
       "A scheduling app built for Louis Vuitton employees in Portugal.",
@@ -1530,7 +1529,6 @@ export const projects: Project[] = [
     myRole: "I designed and built the app to make everyday scheduling information easier to use.",
     workedOn: ["App development", "Schedule organisation", "Day, week, and month views", "Interface design"],
     links: [],
-    actions: { website: { href: "https://lv-schedule-viewer.vercel.app/", label: "Open app" } },
     logoVisual: {
       type: "image", label: "Louis Vuitton logo", src: "/assets/projects/lv-schedule-viewer/logo.png",
       alt: "Louis Vuitton monogram and wordmark", fit: "contain", tone: "white",
@@ -1569,7 +1567,6 @@ export const projects: Project[] = [
       },
       status: "Live · 2026 edition",
       meta: "App / Local Discovery",
-      buttons: [{ label: "Explore the app", href: "https://santos-populares-lisboa.vercel.app/" }],
     },
     overview: [
       "A guide to the neighbourhood festivities of Lisbon's Santos Populares in 2026.",
@@ -1579,7 +1576,6 @@ export const projects: Project[] = [
     myRole: "I designed and built the app to make it easier to find festivities and plan a night out in Lisbon.",
     workedOn: ["App development", "Event discovery", "Search and filters", "Map and location views", "Interface design"],
     links: [],
-    actions: { website: { href: "https://santos-populares-lisboa.vercel.app/", label: "Explore the app" } },
     cardVisual: {
       type: "image", label: "Santos Populares event guide", src: "/assets/projects/santos-populares/app.png",
       alt: "Santos Populares Lisboa app showing neighbourhood festivities, dates, and search filters", fit: "cover", tone: "warm",
