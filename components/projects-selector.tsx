@@ -26,6 +26,8 @@ const projectOrder = [
   "pocket-tours",
   "footy",
   "finance",
+  "lv-schedule-viewer",
+  "santos-populares",
   "loves-conception",
   "vlogui",
 ];

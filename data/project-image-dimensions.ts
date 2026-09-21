@@ -1,5 +1,7 @@
 // Intrinsic dimensions keep homepage cards proportional to their source images.
 export const projectImageDimensions: Record<string, { width: number; height: number }> = {
+  "/assets/projects/lv-schedule-viewer/logo.png": { width: 1079, height: 1000 },
+  "/assets/projects/santos-populares/app.png": { width: 1440, height: 1000 },
   "/assets/projects/racefiets013/homepage-rf013.png": {
     "width": 670,
     "height": 422
