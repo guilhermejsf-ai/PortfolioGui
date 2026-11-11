@@ -1,3 +1,6 @@
+"use client";
+
+import { T, useLanguage } from "@/components/language-provider";
 import Image from "next/image";
 
 const platforms = [
@@ -9,15 +12,16 @@ const platforms = [
 ];
 
 export function ProjectRelatedLink({ href, label }: { href: string; label: string }) {
+  const { t } = useLanguage();
   const isWeb = /^https?:\/\//.test(href);
   const hostname = isWeb ? new URL(href).hostname.replace(/^www\./, "") : "";
   const platform = platforms.find(item => hostname === item.host);
   const name = platform?.name ?? (isWeb ? "Website" : label);
   return (
     <a href={href} className={platform ? "project-platform-link" : undefined}
-      aria-label={name} title={name} target={isWeb ? "_blank" : undefined}
+      aria-label={t(name)} title={t(name)} target={isWeb ? "_blank" : undefined}
       rel={isWeb ? "noreferrer" : undefined}>
-      {platform ? <Image src={`/assets/social/${platform.icon}.svg`} width={24} height={24} alt="" /> : name}
+      {platform ? <Image src={`/assets/social/${platform.icon}.svg`} width={24} height={24} alt="" /> : <T>{name}</T>}
     </a>
   );
 }

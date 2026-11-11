@@ -1,4 +1,6 @@
 "use client";
+import { T, useLanguage } from "@/components/language-provider";
+
 
 import Image from "next/image";
 import { startTransition, useMemo, useState } from "react";
@@ -881,6 +883,7 @@ function getInitialSlideIndexForSelectedSlug(
 }
 
 export function TravelSelector({ groups }: TravelSelectorProps) {
+  const { t } = useLanguage();
   const orderedGroups = useMemo(
     () =>
       [...groups].sort((a, b) => {
@@ -962,8 +965,8 @@ export function TravelSelector({ groups }: TravelSelectorProps) {
               : "hover:-translate-y-0.5",
           )}
           aria-pressed={isActive}
-          aria-label={entry.hoverLabel}
-          title={entry.hoverLabel}
+          aria-label={t(entry.hoverLabel)}
+          title={t(entry.hoverLabel)}
         >
           <div
             className={cn(
@@ -974,10 +977,10 @@ export function TravelSelector({ groups }: TravelSelectorProps) {
                 : "border-line/65 group-hover:scale-[1.02] group-hover:border-accent/20",
             )}
           >
-            <span className="leading-none">{entry.flag}</span>
+            <span className="leading-none"><T>{entry.flag}</T></span>
           </div>
           <span className="flex min-h-8 items-start justify-center text-center text-[10px] leading-4 text-muted">
-            {entry.hoverLabel}
+            <T>{entry.hoverLabel}</T>
           </span>
         </button>
       </div>
@@ -995,14 +998,14 @@ export function TravelSelector({ groups }: TravelSelectorProps) {
             >
               <div>
                 <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-muted/72 sm:text-[10.5px]">
-                  {group.title}
+                  <T>{group.title}</T>
                 </p>
               </div>
 
               {group.slug === "roadtrips" ? (
                 <div className="mt-2.5 flex flex-wrap items-center gap-1.5 md:gap-2">
                   <div className="flex items-center gap-1">
-                    {group.items
+                    <T>{group.items
                       .filter((entry) =>
                         [
                           "england-uk-roadtrip",
@@ -1010,10 +1013,10 @@ export function TravelSelector({ groups }: TravelSelectorProps) {
                           "scotland-uk-roadtrip",
                         ].includes(entry.slug),
                       )
-                      .map(renderSelectorItem)}
+                      .map(renderSelectorItem)}</T>
                   </div>
                   <div className="flex items-center gap-1">
-                    {group.items
+                    <T>{group.items
                       .filter((entry) =>
                         [
                           "albania-balkan-roadtrip",
@@ -1023,12 +1026,12 @@ export function TravelSelector({ groups }: TravelSelectorProps) {
                           "montenegro-balkan-roadtrip",
                         ].includes(entry.slug),
                       )
-                      .map(renderSelectorItem)}
+                      .map(renderSelectorItem)}</T>
                   </div>
                 </div>
               ) : group.slug === "more" ? (
                 <div className="mt-2.5 flex items-start gap-1.5 lg:gap-2">
-                  {group.items.slice(0, 4).map(renderSelectorItem)}
+                  <T>{group.items.slice(0, 4).map(renderSelectorItem)}</T>
                   {group.items.length > 4 && (
                     <button
                       type="button"
@@ -1037,20 +1040,18 @@ export function TravelSelector({ groups }: TravelSelectorProps) {
                         "flex h-[96px] w-14 shrink-0 flex-col items-center justify-start gap-2 rounded-[12px] p-1.5 transition hover:-translate-y-0.5 sm:p-2",
                         showMoreDestinations && "bg-white shadow-[0_10px_24px_rgba(15,23,42,0.08)]",
                       )}
-                      aria-label={showMoreDestinations ? "Hide more destinations" : "Show more destinations"}
+                      aria-label={t(showMoreDestinations ? "Hide more destinations" : "Show more destinations")}
                       aria-expanded={showMoreDestinations}
                       aria-controls="more-travel-destinations"
                     >
-                      <span className="flex h-[40px] w-[40px] shrink-0 items-center justify-center rounded-[14px] border border-line/65 bg-white text-xl font-semibold leading-none text-ink sm:h-[44px] sm:w-[44px]">
-                        …
-                      </span>
-                      <span className="text-[10px] leading-4 text-muted">More</span>
+                      <span className="flex h-[40px] w-[40px] shrink-0 items-center justify-center rounded-[14px] border border-line/65 bg-white text-xl font-semibold leading-none text-ink sm:h-[44px] sm:w-[44px]"><T>{"…"}</T></span>
+                      <span className="text-[10px] leading-4 text-muted"><T>{"More"}</T></span>
                     </button>
                   )}
                 </div>
               ) : (
                 <div className="mt-2.5 flex items-center gap-2 sm:gap-2.5 md:gap-1.5 lg:gap-2 md:flex-wrap">
-                  {group.items.map(renderSelectorItem)}
+                  <T>{group.items.map(renderSelectorItem)}</T>
                 </div>
               )}
             </div>
@@ -1063,7 +1064,7 @@ export function TravelSelector({ groups }: TravelSelectorProps) {
           id="more-travel-destinations"
           className="flex max-w-full flex-wrap gap-1.5 rounded-[18px] border border-line/65 bg-white p-2 shadow-card sm:gap-2"
         >
-          {moreGroup.items.slice(4).map(renderSelectorItem)}
+          <T>{moreGroup.items.slice(4).map(renderSelectorItem)}</T>
         </div>
       )}
 
@@ -1077,11 +1078,9 @@ export function TravelSelector({ groups }: TravelSelectorProps) {
           <div className="flex min-w-0 flex-col">
             <div className="flex flex-wrap items-center gap-2.5">
               <span className="rounded-full bg-accent-soft px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-accent-deep">
-                {getGroupLabel(selectedEntry)}
+                <T>{getGroupLabel(selectedEntry)}</T>
               </span>
-              <span className="text-[11px] font-medium tracking-[0.01em] text-muted">
-                Check more on my travel blog:
-              </span>
+              <span className="text-[11px] font-medium tracking-[0.01em] text-muted"><T>{"Check more on my travel blog:"}</T></span>
               <a
                 href="https://www.instagram.com/guilhermejsf"
                 target="_blank"
@@ -1096,13 +1095,13 @@ export function TravelSelector({ groups }: TravelSelectorProps) {
                     className="object-contain"
                   />
                 </span>
-                <span>Instagram</span>
+                <span><T>{"Instagram"}</T></span>
               </a>
             </div>
 
             <div className="mt-5">
               <h2 className="font-display text-[2.7rem] leading-[0.98] tracking-tight text-ink sm:text-[3.4rem]">
-                {getTravelPageTitle(selectedEntry)}
+                <T>{getTravelPageTitle(selectedEntry)}</T>
               </h2>
             </div>
 
@@ -1111,40 +1110,24 @@ export function TravelSelector({ groups }: TravelSelectorProps) {
                 <div className="border-b border-black/6 pb-3 pt-1">
                   <div className="space-y-0 border-b border-black/6 pb-3">
                     <div className="py-3 text-sm leading-7 text-ink/82 sm:text-[0.96rem]">
-                      <span>
-                        EU projects shaped a big part of who I became.
-                      </span>
+                      <span><T>{"EU projects shaped a big part of who I became."}</T></span>
                     </div>
                     <div className="border-b border-black/6 py-3 text-sm leading-7 text-ink/82 sm:text-[0.96rem]">
-                      <span>
-                        I worked on important topics, met people from completely
-                        different backgrounds, and found a different sense of
-                        community that I did not really have before. Those
-                        projects made me very good at public speaking,
-                        leadership, teaching, listening, adapting, and learning
-                        from everyone around me.
-                      </span>
+                      <span><T>{"I worked on important topics, met people from completely different backgrounds, and found a different sense of community that I did not really have before. Those projects made me very good at public speaking, leadership, teaching, listening, adapting, and learning from everyone around me."}</T></span>
                     </div>
                     <div className="py-3 text-sm leading-7 text-ink/82 sm:text-[0.96rem]">
-                      <span>
-                        More than just good experiences, they became an
-                        important part of my path. They helped me grow my
-                        career, expand my network, and, most importantly, become
-                        a more open, confident and ultimately more human.
-                      </span>
+                      <span><T>{"More than just good experiences, they became an important part of my path. They helped me grow my career, expand my network, and, most importantly, become a more open, confident and ultimately more human."}</T></span>
                     </div>
                   </div>
 
-                  <p className="mt-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-accent-deep">
-                    List of the projects I&apos;ve participated in
-                  </p>
+                  <p className="mt-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-accent-deep"><T>{"List of the projects I've participated in"}</T></p>
                   <div className="mt-3 space-y-0">
                     {euProjects.map((project) => (
                       <div
                         key={`${selectedEntry.slug}-${project}`}
                         className="border-b border-black/6 py-3 text-sm leading-7 text-ink/82 last:border-b-0 sm:text-[0.96rem]"
                       >
-                        <span>{project}</span>
+                        <span><T>{project}</T></span>
                       </div>
                     ))}
                   </div>
@@ -1157,16 +1140,14 @@ export function TravelSelector({ groups }: TravelSelectorProps) {
                     key={`${selectedEntry.slug}-note-${index}`}
                     className="border-b border-black/6 py-3 text-sm leading-7 text-ink/82 sm:text-[0.96rem]"
                   >
-                    <span>{line}</span>
+                    <span><T>{line}</T></span>
                   </div>
                 ))}
               </div>
             </div>
 
             <div className="mt-4 pt-4">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-accent-deep">
-                Cities Visited
-              </p>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-accent-deep"><T>{"Cities Visited"}</T></p>
               {visitedCities.length ? (
                 <div className="mt-4 flex flex-wrap gap-2.5">
                   {visitedCities.map((city) => (
@@ -1177,14 +1158,12 @@ export function TravelSelector({ groups }: TravelSelectorProps) {
                         selectedTheme.surface,
                       )}
                     >
-                      {city}
+                      <T>{city}</T>
                     </span>
                   ))}
                 </div>
               ) : (
-                <p className="mt-3 text-sm leading-7 text-muted/65 sm:text-[0.96rem]">
-                  Add city names here.
-                </p>
+                <p className="mt-3 text-sm leading-7 text-muted/65 sm:text-[0.96rem]"><T>{"Add city names here."}</T></p>
               )}
             </div>
           </div>
@@ -1203,10 +1182,8 @@ export function TravelSelector({ groups }: TravelSelectorProps) {
                           )
                         }
                         className="absolute left-3 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/55 bg-black/42 text-[1.65rem] font-semibold text-white shadow-[0_16px_36px_rgba(0,0,0,0.28)] backdrop-blur-sm transition hover:scale-[1.04] hover:bg-black/56"
-                        aria-label="Previous travel image"
-                      >
-                        ‹
-                      </button>
+                        aria-label={t("Previous travel image")}
+                      ><T>{"‹"}</T></button>
                       <button
                         type="button"
                         onClick={() =>
@@ -1215,16 +1192,14 @@ export function TravelSelector({ groups }: TravelSelectorProps) {
                           )
                         }
                         className="absolute right-3 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/55 bg-black/42 text-[1.65rem] font-semibold text-white shadow-[0_16px_36px_rgba(0,0,0,0.28)] backdrop-blur-sm transition hover:scale-[1.04] hover:bg-black/56"
-                        aria-label="Next travel image"
-                      >
-                        ›
-                      </button>
+                        aria-label={t("Next travel image")}
+                      ><T>{"›"}</T></button>
                     </>
                   ) : null}
 
                   <Image
                     src={currentSlide.imageSrc}
-                    alt={currentSlide.imageAlt ?? currentSlide.title}
+                    alt={t(currentSlide.imageAlt ?? currentSlide.title)}
                     width={900}
                     height={1200}
                     sizes="(max-width: 640px) calc(100vw - 80px), (max-width: 1280px) 480px, 32vw"
@@ -1240,18 +1215,18 @@ export function TravelSelector({ groups }: TravelSelectorProps) {
                             type="button"
                             onClick={() => setActiveSlideIndex(index)}
                             className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full"
-                            aria-label={`Show ${slide.title}`}
+                            aria-label={t(`Show ${slide.title}`)}
                             aria-pressed={index === activeSlideIndex}
-                            title={slide.title}
+                            title={t(slide.title)}
                           >
                             <span aria-hidden="true" className={cn("h-2 rounded-full transition-all duration-300", index === activeSlideIndex ? "w-8 bg-white" : "w-2 bg-white/55")} />
-                            <span className="sr-only">{slide.title}</span>
+                            <span className="sr-only"><T>{slide.title}</T></span>
                           </button>
                         ))}
                       </div>
                       <span className="shrink-0 pl-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/88">
-                        {String(activeSlideIndex + 1).padStart(2, "0")} /{" "}
-                        {String(imageSlides.length).padStart(2, "0")}
+                        <T>{String(activeSlideIndex + 1).padStart(2, "0")}</T><T>{"/"}</T><T>{" "}</T>
+                        <T>{String(imageSlides.length).padStart(2, "0")}</T>
                       </span>
                     </div>
                   ) : null}
@@ -1265,14 +1240,14 @@ export function TravelSelector({ groups }: TravelSelectorProps) {
                 )}
               >
                 <div className="relative flex aspect-[5/4] items-center justify-center overflow-hidden rounded-[20px] border border-line/70 bg-white/86 text-[3rem] sm:aspect-square sm:text-[3.4rem]">
-                  <span className="leading-none">{selectedEntry.flag}</span>
+                  <span className="leading-none"><T>{selectedEntry.flag}</T></span>
                 </div>
                 <div className="flex min-w-0 flex-col items-end gap-2">
                   <p className="max-w-[18rem] text-right text-sm leading-6 text-muted">
-                    {selectedEntry.meta}
+                    <T>{selectedEntry.meta}</T>
                   </p>
                   <p className="text-right text-sm font-semibold text-ink">
-                    {selectedEntry.subtitle}
+                    <T>{selectedEntry.subtitle}</T>
                   </p>
                 </div>
               </div>

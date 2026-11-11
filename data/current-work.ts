@@ -63,6 +63,48 @@ export const currentWork: Project[] = [
     previewSlides: [
       {
         type: "image",
+        label: "Blendbyte Homepage · technology · November 2026",
+        src: "/assets/projects/blendbyte/website-hero-technology-2026-11.png",
+        alt: "Blendbyte redesigned website: homepage · technology",
+        fit: "cover",
+      },
+      {
+        type: "image",
+        label: "Blendbyte Homepage · artificial intelligence · November 2026",
+        src: "/assets/projects/blendbyte/website-hero-ai-2026-11.png",
+        alt: "Blendbyte redesigned website: homepage · artificial intelligence",
+        fit: "cover",
+      },
+      {
+        type: "image",
+        label: "Blendbyte Services · November 2026",
+        src: "/assets/projects/blendbyte/website-services-2026-11.png",
+        alt: "Blendbyte redesigned website: services",
+        fit: "cover",
+      },
+      {
+        type: "image",
+        label: "Blendbyte Featured projects · November 2026",
+        src: "/assets/projects/blendbyte/website-featured-projects-2026-11.png",
+        alt: "Blendbyte redesigned website: featured projects",
+        fit: "cover",
+      },
+      {
+        type: "image",
+        label: "Blendbyte Brand and contact · November 2026",
+        src: "/assets/projects/blendbyte/website-brand-2026-11.png",
+        alt: "Blendbyte redesigned website: brand and contact",
+        fit: "cover",
+      },
+      {
+        type: "image",
+        label: "Blendbyte Projects · November 2026",
+        src: "/assets/projects/blendbyte/website-projects-2026-11.png",
+        alt: "Blendbyte redesigned website: projects",
+        fit: "cover",
+      },
+      {
+        type: "image",
         label: "Blendbyte website",
         src: "/assets/projects/blendbyte/website-homepage.png",
         alt: "Blendbyte website homepage with its new identity and marketing and technology message",

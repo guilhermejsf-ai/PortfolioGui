@@ -1,4 +1,6 @@
 "use client";
+import { T, useLanguage } from "@/components/language-provider";
+
 
 import Image from "next/image";
 import { useEffect, useRef, type CSSProperties } from "react";
@@ -10,6 +12,7 @@ export function ProjectWheel({ projects, selectedSlug, onSelect }: {
   selectedSlug: string;
   onSelect: (slug: string) => void;
 }) {
+  const { t } = useLanguage();
   const track = useRef<HTMLDivElement>(null);
   const gesture = useRef<{ x: number; y: number; id: number; dragging: boolean } | null>(null);
   const suppressClick = useRef(false);
@@ -45,7 +48,7 @@ export function ProjectWheel({ projects, selectedSlug, onSelect }: {
   }, [projects, selectedIndex, onSelect]);
 
   return (
-    <section className="project-wheel" aria-label="Choose a project" aria-roledescription="carousel"
+    <section className="project-wheel" aria-label={t("Choose a project")} aria-roledescription="carousel"
       onKeyDown={event => {
         if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
           event.preventDefault();
@@ -55,7 +58,7 @@ export function ProjectWheel({ projects, selectedSlug, onSelect }: {
           onSelect(projects[event.key === "Home" ? 0 : projects.length - 1].slug);
         }
       }}>
-      <div className="wheel-track" ref={track} tabIndex={0} aria-label="Project logos. Use left and right arrow keys to browse."
+      <div className="wheel-track" ref={track} tabIndex={0} aria-label={t("Project logos. Use left and right arrow keys to browse.")}
         onPointerDown={event => {
           if (event.button !== 0) return;
           gesture.current = { x: event.clientX, y: event.clientY, id: event.pointerId, dragging: false };
@@ -100,18 +103,18 @@ export function ProjectWheel({ projects, selectedSlug, onSelect }: {
                 "--wheel-dip": `${Math.min(distance, 6) * 6}px`, opacity: visible ? [1, .95, .85, .72, .56, .4][distance] : 0,
                 zIndex: count - distance, pointerEvents: visible ? "auto" : "none" } as CSSProperties}
               tabIndex={visible ? 0 : -1} aria-hidden={!visible}
-              aria-label={`Select ${project.title}`} aria-pressed={distance === 0} aria-controls="project-detail"
+              aria-label={t(`Select ${project.title}`)} aria-pressed={distance === 0} aria-controls="project-detail"
               onClick={() => onSelect(project.slug)}>
               {logo.type === "image" ? <Image src={logo.src} alt="" fill sizes="(max-width: 640px) 90px, 112px" draggable={false} className="object-contain" /> :
-                <span className="wheel-initials">{project.slug === "blendbyte" ? "BB" : project.slug === "grupo-invest" ? "GI" : project.title.slice(0, 2)}</span>}
+                <span className="wheel-initials"><T>{project.slug === "blendbyte" ? "BB" : project.slug === "grupo-invest" ? "GI" : project.title.slice(0, 2)}</T></span>}
             </button>
           );
         })}
       </div>
       <div className="wheel-controls">
-        <button type="button" aria-label="Previous project" onClick={() => rotate(-1)}><Chevron direction="left" /></button>
-        <p aria-live="polite" aria-atomic="true"><strong>{projects[selectedIndex].title}</strong><span>{selectedIndex + 1} / {projects.length}</span></p>
-        <button type="button" aria-label="Next project" onClick={() => rotate(1)}><Chevron /></button>
+        <button type="button" aria-label={t("Previous project")} onClick={() => rotate(-1)}><Chevron direction="left" /></button>
+        <p aria-live="polite" aria-atomic="true"><strong><T>{projects[selectedIndex].title}</T></strong><span><T>{selectedIndex + 1}</T>{" / "}<T>{projects.length}</T></span></p>
+        <button type="button" aria-label={t("Next project")} onClick={() => rotate(1)}><Chevron /></button>
       </div>
     </section>
   );
