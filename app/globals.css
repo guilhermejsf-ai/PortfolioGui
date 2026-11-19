@@ -1692,7 +1692,7 @@ a.studio-tile:hover { box-shadow: 0 12px 28px -15px #0003; transform: translateY
 .studio-grid > .tile-blendbyte .tile-art { height: 160px; min-height: 0; background: #252529; }
 .studio-grid > .tile-blendbyte .tile-image { height: 100%; object-fit: contain; }
 @media (min-width: 1001px) {
-  .intro-tile h1 { font-size: clamp(23px, 2.2vw, 30px); white-space: nowrap; }
+  .intro-tile h1 { font-size: clamp(23px, 2.2vw, 30px); }
   .studio-grid > .intro-tile,
   .studio-grid > .tile-nordensa,
   .studio-grid > .tile-blendbyte { height: 240px; min-height: 240px; }

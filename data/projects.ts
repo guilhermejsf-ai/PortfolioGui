@@ -121,7 +121,7 @@ export const projects: Project[] = [
       "I led growth and digital operations for Racefiets013, rebuilding its Shopify store, refreshing the brand, and improving the processes behind online sales. Instagram gained more than 40,000 followers in six months.",
     role: "Growth and Digital Operations Lead",
     iconBadge: "Growth Lead",
-    year: "2025 - Present",
+    year: "2025 - 2026",
     tags: ["Brand", "Website", "Client work"],
     featured: true,
     detailCard: {
@@ -138,9 +138,9 @@ export const projects: Project[] = [
       outcome: {
         title: "Outcome",
         text:
-          "Instagram gained more than 40,000 followers in six months. December sessions rose from 12k to 25k year over year, and online sales increased from €2k to €9k. I built automations that saved the team 25 hours a week and grew the email list from zero to 267 subscribers in two months.",
+          "December sessions rose from 12k to 25k year over year, and online revenue rose from €2k to €19k over the same comparison. I built automations that saved the team an estimated 25 hours a week. Instagram gained more than 40,000 followers in six months, and the email list reached 267 subscribers in two months.",
       },
-      status: "2025 - Present",
+      status: "2025 - 2026",
       meta: "Company Roles & Client Work",
       buttons: [
         { label: "Read more", href: "/projects/racefiets013" },
@@ -283,7 +283,7 @@ export const projects: Project[] = [
       "Co-founded Nordensa and helped build the company's early operating model across partnerships, hiring, go-to-market execution, and internal systems. I remain a shareholder.",
     role: "Co-founder, Operations and Growth · Current shareholder",
     iconBadge: "Co-Founded",
-    year: "2022 - 2024",
+    year: "2021 - 2024",
     tags: ["Venture", "Brand", "Product"],
     featured: true,
     detailCard: {
@@ -300,7 +300,7 @@ export const projects: Project[] = [
         text:
           "Supported the company as it raised €1.6 million across two pre-seed rounds, closed 11 strategic partnerships, contributed to 5 player signings and more than 10 trials arranged, and supported team growth from 2 to 30+ people including 15 hires across multiple functions.",
       },
-      status: "2022 - 2024",
+      status: "2021 - 2024",
       meta: "Founded / Built",
       buttons: [
         { label: "Read more", href: "/projects/nordensa" },

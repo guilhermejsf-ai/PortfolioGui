@@ -3,6 +3,11 @@ export const projectHighlights: Record<
   string,
   { value: string; label: string }[]
 > = {
+  blendbyte: [
+    { value: "~€50k", label: "Business closed, including upsells" },
+    { value: "4", label: "Clients with closed deals" },
+    { value: "50+", label: "Customer records in a CRM implementation in progress" },
+  ],
   nordensa: [
     { value: "€1.6m", label: "Raised across two rounds I supported" },
     { value: "11", label: "Strategic partnerships closed" },

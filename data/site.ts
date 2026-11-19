@@ -10,7 +10,6 @@ export const siteConfig = {
   cvPdf: "/cv/Guilherme_Fernandes_CV.pdf" as string | null,
   cvPreviewPages: [
     "/cv/Guilherme_Fernandes_CV-page-1.png",
-    "/cv/Guilherme_Fernandes_CV-page-2.png",
   ],
   social: {
     instagram: "https://www.instagram.com/guilhermejsf",

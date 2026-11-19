@@ -74,10 +74,10 @@ export async function WorkIndex() {
     <div className="studio-shell">
       <section className="studio-grid" aria-label={t("My work and a little about me")}>
         <article className="studio-tile intro-tile">
-          <h1><T>{"Ideas into action."}</T>{" "}<span><T>{"Action into growth."}</T></span></h1>
+          <h1><T>{"Business operations and digital transformation"}</T></h1>
           <div className="intro-divider" />
-          <p><T>{"I work across growth and operations, turning early ideas into products, partnerships, and processes that teams can use."}</T></p>
-          <p><T>{"I’ve co-founded ventures, led digital growth, and built systems that make day-to-day work easier."}</T></p>
+          <p><T>{"I manage Blendbyte and build the systems our team and clients use to run their operations."}</T></p>
+          <p><T>{"My work spans company building, client delivery, CRM implementation and AI training."}</T></p>
           <p className="intro-specialties"><T>{"Growth & operations · Company building · AI-assisted automation"}</T></p>
         </article>
         <ProjectTile project={nordensa} priority />
@@ -96,7 +96,7 @@ export async function WorkIndex() {
         <div className="feature-column">
           <article className="studio-tile now-tile">
             <p className="tile-kicker"><T>{"Currently"}</T></p>
-            <Link href="/projects?project=blendbyte" className="now-entry"><h2><T>{"Managing Blendbyte"}</T></h2><p><T>{"Led the restructure and rebrand, recruited a new team, and built Blendbyte OS for the company’s daily work."}</T></p></Link>
+            <Link href="/projects?project=blendbyte" className="now-entry"><h2><T>{"Managing Blendbyte"}</T></h2><p><T>{"Closed around €50k in deals with four clients and built the operating system the team uses day to day."}</T></p></Link>
             <Link href="/projects?project=grupo-invest" className="now-entry"><h2><T>{"Making operations work smarter"}</T></h2><p><T>{"Built a new website and worked on SEO and email marketing. I’m now reviewing processes and introducing AI and automation at Grupo Invest / Invest2030."}</T></p></Link>
           </article>
           <article className="studio-tile results-tile">
